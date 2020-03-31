@@ -22,4 +22,12 @@ public class FuncExprNode extends ExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "FuncExprNode{" +
+                "identifier='" + identifier + '\'' +
+                ", paramList=" + paramList +
+                '}';
+    }
 }

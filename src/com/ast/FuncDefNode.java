@@ -42,4 +42,14 @@ public class FuncDefNode extends DefNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "FuncDefNode{" +
+                "retType=" + retType +
+                ", identifier='" + identifier + '\'' +
+                ", paramList=" + paramList +
+                ", stmt=" + stmt +
+                '}';
+    }
 }

@@ -1,12 +1,11 @@
 package com;
 
-import com.ast.*;
+import com.ast.ProgramNode;
 import com.frontend.ASTBuilder;
+import com.frontend.Printer;
 import com.parser.*;
-import com.utility.ErrorHandler;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.SyntaxTree;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -14,8 +13,6 @@ import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        ErrorHandler errorHandler = new ErrorHandler();
-
         String fileName;
         fileName = "test.mx";
 
@@ -33,16 +30,17 @@ public class Main {
             MxStarLexer lexer = new MxStarLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MxStarParser parser = new MxStarParser(tokens);
+            ParseTree parseTree = parser.program();
             ASTBuilder astBuilder = new ASTBuilder();
+            ProgramNode astRoot = (ProgramNode) astBuilder.visit(parseTree);
+            //
+            Printer printer = new Printer();
+            printer.visit(astRoot);
         } catch (Exception exception) {
             System.out.println("Compile Error!");
         }
 
-        if (errorHandler.getCnt() > 0) {
-            System.err.println("Compiler Error!");
-        } else {
-            System.out.println("AST finished!");
-        }
+        System.out.println("AST finished!");
     }
 
 }

@@ -24,4 +24,12 @@ public class MemberExprNode extends ExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "MemberExprNode{" +
+                "expr=" + expr +
+                ", identifier='" + identifier + '\'' +
+                '}';
+    }
 }

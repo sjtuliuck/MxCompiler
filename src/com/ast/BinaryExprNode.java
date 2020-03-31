@@ -96,4 +96,13 @@ public class BinaryExprNode extends ExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "BinaryExprNode{" +
+                "op=" + op +
+                ", lhs=" + lhs +
+                ", rhs=" + rhs +
+                '}';
+    }
 }

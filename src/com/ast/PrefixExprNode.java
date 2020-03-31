@@ -51,4 +51,12 @@ public class PrefixExprNode extends ExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "PrefixExprNode{" +
+                "op=" + op +
+                ", expr=" + expr +
+                '}';
+    }
 }

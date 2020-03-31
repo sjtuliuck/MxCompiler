@@ -13,4 +13,11 @@ abstract public class TypeNode extends Node {
     public String getIdentifier() {
         return identifier;
     }
+
+    @Override
+    public String toString() {
+        return "TypeNode{" +
+                "identifier='" + identifier + '\'' +
+                '}';
+    }
 }

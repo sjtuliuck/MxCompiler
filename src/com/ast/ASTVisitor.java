@@ -32,7 +32,7 @@ public interface ASTVisitor {
     void visit(PostfixExprNode node);
     void visit(PrefixExprNode node);
     void visit(BinaryExprNode node);
-    void visit(AssignExprNode node);
+//    void visit(AssignExprNode node);
     // ConstExprNode
     void visit(BoolConstNode node);
     void visit(IntConstNode node);

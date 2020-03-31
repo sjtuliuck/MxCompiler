@@ -4,18 +4,12 @@ import com.ast.*;
 import com.parser.MxStarBaseVisitor;
 import com.parser.MxStarParser;
 import com.parser.MxStarVisitor;
-import com.type.Type;
 import com.utility.*;
 import org.antlr.v4.runtime.ParserRuleContext;
 
 import java.util.*;
 
 public class ASTBuilder extends MxStarBaseVisitor<Node> {
-    ErrorHandler errorHandler;
-
-    public ASTBuilder() {
-        errorHandler = new ErrorHandler();
-    }
 
     @Override
     public Node visitProgram(MxStarParser.ProgramContext ctx) {
@@ -75,11 +69,11 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
         }
         // constructor
         if (ctx.constructorDef().size() > 1) {
-            errorHandler.error(new Location(ctx.constructorDef(0)), "constructor number error");
+            throw new CompileError(new Location(ctx.constructorDef(0)), "constructor number error");
         }
         for (var constructorDef : ctx.constructorDef()) {
             if (!constructorDef.Identifier().getText().equals(identifier)) {
-                errorHandler.error(new Location(constructorDef), "constructor name error");
+                throw new CompileError(new Location(constructorDef), "constructor name error");
             }
             funcDefNodeList.add((FuncDefNode) visit(constructorDef));
         }
@@ -400,7 +394,6 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     @Override
     public Node visitErrorCreator(MxStarParser.ErrorCreatorContext ctx) {
         Location location = new Location(ctx);
-        errorHandler.error(location, "Creator Error");
         throw new CompileError(location, "Creator Error");
     }
 

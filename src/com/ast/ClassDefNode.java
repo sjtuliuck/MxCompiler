@@ -42,4 +42,13 @@ public class ClassDefNode extends DefNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "ClassDefNode{" +
+                "identifier='" + identifier + '\'' +
+                ", varNodeList=" + varNodeList +
+                ", funcDefNodeList=" + funcDefNodeList +
+                '}';
+    }
 }

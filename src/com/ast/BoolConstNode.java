@@ -18,4 +18,11 @@ public class BoolConstNode extends ConstExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "BoolConstNode{" +
+                "value=" + value +
+                '}';
+    }
 }

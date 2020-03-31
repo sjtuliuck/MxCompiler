@@ -24,4 +24,12 @@ public class ArrayExprNode extends ExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "ArrayExprNode{" +
+                "array=" + array +
+                ", idx=" + idx +
+                '}';
+    }
 }

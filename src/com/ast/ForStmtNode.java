@@ -36,4 +36,14 @@ public class ForStmtNode extends StmtNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "ForStmtNode{" +
+                "initExpr=" + initExpr +
+                ", condExpr=" + condExpr +
+                ", stepExpr=" + stepExpr +
+                ", bodyStmt=" + bodyStmt +
+                '}';
+    }
 }

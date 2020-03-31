@@ -32,4 +32,13 @@ public class NewExprNode extends ExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "NewExprNode{" +
+                "identifier='" + identifier + '\'' +
+                ", exprNodeList=" + exprNodeList +
+                ", dim=" + dim +
+                '}';
+    }
 }

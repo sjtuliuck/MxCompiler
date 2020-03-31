@@ -23,4 +23,11 @@ public class ProgramNode extends Node {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "ProgramNode{" +
+                "defNodeList=" + defNodeList +
+                '}';
+    }
 }

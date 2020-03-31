@@ -18,4 +18,11 @@ public class IntConstNode extends ConstExprNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "IntConstNode{" +
+                "value=" + value +
+                '}';
+    }
 }

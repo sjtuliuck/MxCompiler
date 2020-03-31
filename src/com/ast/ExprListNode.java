@@ -21,4 +21,11 @@ public class ExprListNode extends Node {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "ExprListNode{" +
+                "exprList=" + exprList +
+                '}';
+    }
 }

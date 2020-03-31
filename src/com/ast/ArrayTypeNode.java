@@ -15,4 +15,12 @@ public class ArrayTypeNode extends TypeNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "ArrayTypeNode{" +
+                "type=" + type +
+                ", dim=" + dim +
+                '}';
+    }
 }

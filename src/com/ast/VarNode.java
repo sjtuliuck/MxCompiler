@@ -42,4 +42,13 @@ public class VarNode extends DefNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "VarNode{" +
+                "type=" + type +
+                ", identifier='" + identifier + '\'' +
+                ", initExpr=" + initExpr +
+                '}';
+    }
 }

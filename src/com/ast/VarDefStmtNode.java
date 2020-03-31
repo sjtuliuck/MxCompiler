@@ -24,4 +24,11 @@ public class VarDefStmtNode extends StmtNode {
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "VarDefStmtNode{" +
+                "varNodeList=" + varNodeList +
+                '}';
+    }
 }
