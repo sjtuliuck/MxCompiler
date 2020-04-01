@@ -39,7 +39,5 @@ public interface ASTVisitor {
     void visit(StringConstNode node);
     void visit(NullConstNode node);
     // TypeNode
-    void visit(PrimitiveTypeNode node);
-    void visit(ClassTypeNode node);
-    void visit(ArrayTypeNode node);
+    void visit(TypeNode node);
 }

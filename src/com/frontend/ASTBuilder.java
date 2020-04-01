@@ -1,6 +1,7 @@
 package com.frontend;
 
 import com.ast.*;
+import com.frontend.type.*;
 import com.parser.MxStarBaseVisitor;
 import com.parser.MxStarParser;
 import com.parser.MxStarVisitor;
@@ -10,6 +11,12 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import java.util.*;
 
 public class ASTBuilder extends MxStarBaseVisitor<Node> {
+    // type
+    public Type boolType = new BoolType();
+    public Type intType = new IntType();
+    public Type nullType = new NullType();
+    public Type stringType = new StringType();
+    public Type voidType = new VoidType();
 
     @Override
     public Node visitProgram(MxStarParser.ProgramContext ctx) {
@@ -88,7 +95,7 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
         if (ctx.type() != null) {
             retType = (TypeNode) visit(ctx.type());
         } else {
-            retType = new PrimitiveTypeNode(new Location(ctx.Void().getSymbol()), "void");
+            retType = new TypeNode(new Location(ctx.Void().getSymbol()), voidType);
         }
         // identifier
         String identifier = ctx.Identifier().getText();
@@ -106,7 +113,7 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     public Node visitConstructorDef(MxStarParser.ConstructorDefContext ctx) {
         Location location = new Location(ctx);
         // type
-        TypeNode retType = new PrimitiveTypeNode(location, null);
+        TypeNode retType = new TypeNode(location, nullType);
         // identifier
         String identifier = ctx.Identifier().getText();
         // param
@@ -134,7 +141,7 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     @Override
     public Node visitVar(MxStarParser.VarContext ctx) {
         Location location = new Location(ctx);
-        TypeNode type = new PrimitiveTypeNode(location, null);
+        TypeNode type = new TypeNode(location, nullType);
         String identifier = ctx.Identifier().getText();
         ExprNode initExpr = null;
         if (ctx.expr() != null) {
@@ -167,10 +174,12 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     @Override
     public Node visitType(MxStarParser.TypeContext ctx) {
         Location location = new Location(ctx);
+        // fixme dim
         int dim = ctx.Bracket().size();
         if (dim > 0) {
-            TypeNode type = (TypeNode) visit(ctx.nonArrayType());
-            return new ArrayTypeNode(location, type, dim);
+            TypeNode typeNode = (TypeNode) visit(ctx.nonArrayType());
+            Type type = new ArrayType(typeNode.getType());
+            return new TypeNode(location, type);
         } else {
             return visit(ctx.nonArrayType());
         }
@@ -180,13 +189,14 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     public Node visitNonArrayType(MxStarParser.NonArrayTypeContext ctx) {
         Location location = new Location(ctx);
         if (ctx.Bool() != null) {
-            return new PrimitiveTypeNode(location, "bool");
+            return new TypeNode(location, boolType);
         } else if (ctx.Int() != null) {
-            return new PrimitiveTypeNode(location, "int");
+            return new TypeNode(location, intType);
         } else if (ctx.String() != null) {
-            return new PrimitiveTypeNode(location, "string");
+            return new TypeNode(location, stringType);
         } else {
-            return new ClassTypeNode(location, ctx.Identifier().getText());
+            Type classType = new ClassType(ctx.Identifier().getText());
+            return new TypeNode(location, classType);
         }
     }
 

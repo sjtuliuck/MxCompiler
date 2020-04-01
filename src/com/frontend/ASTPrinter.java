@@ -144,17 +144,7 @@ public class ASTPrinter implements ASTVisitor {
     }
 
     @Override
-    public void visit(PrimitiveTypeNode node) {
-
-    }
-
-    @Override
-    public void visit(ClassTypeNode node) {
-
-    }
-
-    @Override
-    public void visit(ArrayTypeNode node) {
+    public void visit(TypeNode node) {
 
     }
 }

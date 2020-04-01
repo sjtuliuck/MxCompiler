@@ -1,23 +1,26 @@
 package com.ast;
 
+import com.frontend.type.Type;
 import com.utility.Location;
 
-abstract public class TypeNode extends Node {
-    protected String identifier;
+public class TypeNode extends Node {
+    private Type type;
 
-    public TypeNode(Location location, String identifier) {
+    public TypeNode(Location location, Type type) {
         super(location);
-        this.identifier = identifier;
+        this.type = type;
     }
 
-    public String getIdentifier() {
-        return identifier;
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     @Override
-    public String toString() {
-        return "TypeNode{" +
-                "identifier='" + identifier + '\'' +
-                '}';
+    public void accept(ASTVisitor visitor) {
+        visitor.visit(this);
     }
 }
