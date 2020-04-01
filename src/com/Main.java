@@ -1,8 +1,9 @@
 package com;
 
+import com.ast.ASTVisitor;
 import com.ast.ProgramNode;
 import com.frontend.ASTBuilder;
-import com.frontend.Printer;
+import com.frontend.ASTPrinter;
 import com.parser.*;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -34,8 +35,6 @@ public class Main {
             ASTBuilder astBuilder = new ASTBuilder();
             ProgramNode astRoot = (ProgramNode) astBuilder.visit(parseTree);
             //
-            Printer printer = new Printer();
-            printer.visit(astRoot);
         } catch (Exception exception) {
             System.out.println("Compile Error!");
         }

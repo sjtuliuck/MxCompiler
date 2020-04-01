@@ -1,17 +1,11 @@
 package com.frontend;
 
 import com.ast.*;
-import com.frontend.scope.GeneralScope;
 
-public class Resolver implements ASTVisitor {
-
-    public Resolver() {
-
-    }
-
+public class ASTPrinter implements ASTVisitor {
     @Override
     public void visit(ProgramNode node) {
-
+        System.out.println(node.toString());
     }
 
     @Override
