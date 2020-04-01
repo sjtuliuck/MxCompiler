@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4563f96d-41b6-4b81-a85d-963b9b35b194" name="Default Changelist" comment="" />
+    <list default="true" id="4563f96d-41b6-4b81-a85d-963b9b35b194" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +36,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/com/Main.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/com/frontend/Scope.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/com/ast/Node.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1XprWSdhXBAazB1zaBYsoXQBJRK" />
@@ -125,7 +128,7 @@
       <workItem from="1585620899807" duration="7446000" />
       <workItem from="1585665256378" duration="465000" />
       <workItem from="1585705290209" duration="5371000" />
-      <workItem from="1585717363721" duration="2880000" />
+      <workItem from="1585717363721" duration="9501000" />
     </task>
     <servers />
   </component>
@@ -145,10 +148,11 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="104" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1584886793447" />
-    <state x="374" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581945604204">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="421" y="236" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585727452604">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="374" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1581945604204" />
+    <state x="421" y="236" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585727452604" />
     <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1585726138819">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -224,10 +228,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="393" y="278" width="707" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.800@0.0.1280.800" timestamp="1581990053889" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1585488029710">
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1585744820627">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="305" y="124" width="672" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1585234282886" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585488029710" />
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585744820627" />
   </component>
 </project>
