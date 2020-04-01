@@ -60,7 +60,7 @@ expr:
 	| '(' expr ')'											# parenExpr
 	| expr '.' Identifier									# memberExpr
 	| array = expr '[' idx = expr ']'						# arrayExpr
-	| Identifier '(' exprList? ')'							# funcExpr
+	| expr '(' exprList? ')'								# funcExpr
 	| <assoc = right> New creator							# newExpr
 	| expr op = ('++' | '--')								# postfixExpr
 	| <assoc = right> op = ('++' | '--') expr				# prefixExpr

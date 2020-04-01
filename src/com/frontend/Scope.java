@@ -6,10 +6,11 @@ import com.frontend.entity.FuncEntity;
 import com.frontend.entity.VarEntity;
 import com.utility.CompileError;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Scope {
-    private Map<String, Entity> entityMap;
+    private Map<String, Entity> entityMap = new HashMap<>();
     private Scope father;
     private boolean topLevel;
     private static final String varPrefix = "#var#";

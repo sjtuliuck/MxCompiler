@@ -5,12 +5,12 @@ import com.utility.Location;
 import java.util.List;
 
 public class FuncExprNode extends ExprNode {
-    private String identifier;
+    private ExprNode expr;
     private List<ExprNode> paramList;
 
-    public FuncExprNode(Location location, String identifier, List<ExprNode> paramList) {
+    public FuncExprNode(Location location, ExprNode expr, List<ExprNode> paramList) {
         super(location);
-        this.identifier = identifier;
+        this.expr = expr;
         this.paramList = paramList;
     }
 
@@ -26,7 +26,7 @@ public class FuncExprNode extends ExprNode {
     @Override
     public String toString() {
         return "FuncExprNode{" +
-                "identifier='" + identifier + '\'' +
+                "expr=" + expr +
                 ", paramList=" + paramList +
                 '}';
     }

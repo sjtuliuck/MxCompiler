@@ -332,8 +332,8 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     @Override
     public Node visitFuncExpr(MxStarParser.FuncExprContext ctx) {
         Location location = new Location(ctx);
-        String identifier = ctx.Identifier().getText();
-        FuncExprNode funcExprNode = new FuncExprNode(location, identifier, null);
+        ExprNode exprNode = (ExprNode) visit(ctx.expr());
+        FuncExprNode funcExprNode = new FuncExprNode(location, exprNode, null);
         if (ctx.exprList() != null) {
             ExprListNode exprListNode = (ExprListNode) visit(ctx.exprList());
             funcExprNode.setParamList(exprListNode.getExprList());

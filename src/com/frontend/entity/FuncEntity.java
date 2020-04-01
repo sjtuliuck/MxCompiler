@@ -5,6 +5,7 @@ import com.ast.VarDefNode;
 import com.ast.VarNode;
 import com.frontend.Scope;
 import com.frontend.type.FuncType;
+import com.frontend.type.NullType;
 import com.frontend.type.Type;
 import com.utility.CompileError;
 
@@ -44,15 +45,18 @@ public class FuncEntity extends Entity {
         }
         funcScope = new Scope(father);
         paramList = new ArrayList<VarEntity>();
-        for (VarNode varNode : funcDefNode.getParamList()) {
-            VarEntity varEntity = new VarEntity(varNode);
-            funcScope.addVar(varEntity);
-            paramList.add(varEntity);
+        if (funcDefNode.getParamList() != null) {
+            for (VarNode varNode : funcDefNode.getParamList()) {
+                VarEntity varEntity = new VarEntity(varNode);
+                funcScope.addVar(varEntity);
+                paramList.add(varEntity);
+            }
         }
     }
 
     public boolean isConstructor() {
-        return retType.getTypeName().equals("null");
+//        return retType.getTypeName().equals("null");
+        return retType instanceof NullType;
     }
 
     public Type getRetType() {

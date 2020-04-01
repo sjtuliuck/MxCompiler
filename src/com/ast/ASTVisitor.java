@@ -40,4 +40,6 @@ public interface ASTVisitor {
     void visit(NullConstNode node);
     // TypeNode
     void visit(TypeNode node);
+    // VarNode
+    void visit(VarNode node);
 }

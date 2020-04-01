@@ -1,11 +1,20 @@
-package com.frontend;
+package com.frontend.semantic;
 
 import com.ast.*;
+import com.frontend.Scope;
+import com.frontend.type.*;
 
-public class ASTPrinter implements ASTVisitor {
+public class ScopeScanner implements ASTVisitor {
+    protected Scope globalScope;
+    public Type boolType = new BoolType();
+    public Type intType = new IntType();
+    public Type stringType = new StringType();
+    public Type nullType = new NullType();
+    public Type voidType = new VoidType();
+
     @Override
     public void visit(ProgramNode node) {
-        System.out.println(node.toString());
+
     }
 
     @Override
