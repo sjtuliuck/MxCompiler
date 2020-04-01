@@ -11,12 +11,21 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import java.util.*;
 
 public class ASTBuilder extends MxStarBaseVisitor<Node> {
+    private ErrorHandler errorHandler;
     // type
     public Type boolType = new BoolType();
     public Type intType = new IntType();
     public Type nullType = new NullType();
     public Type stringType = new StringType();
     public Type voidType = new VoidType();
+
+    public ASTBuilder(ErrorHandler errorHandler) {
+        this.errorHandler = errorHandler;
+    }
+
+    public ErrorHandler getErrorHandler() {
+        return errorHandler;
+    }
 
     @Override
     public Node visitProgram(MxStarParser.ProgramContext ctx) {
