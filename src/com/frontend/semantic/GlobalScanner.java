@@ -22,6 +22,7 @@ public class GlobalScanner extends ScopeScanner {
 
     private void checkMain() {
         FuncEntity entity = globalScope.getFunc("main");
+//        System.out.println(entity.getRetType().getTypeName());
         if (entity == null) {
             throw new CompileError("no main function");
         } else if (entity.getParamList().size() != 0) {
@@ -107,7 +108,6 @@ public class GlobalScanner extends ScopeScanner {
                 defNode.accept(this);
             }
         }
-
         checkMain();
     }
 

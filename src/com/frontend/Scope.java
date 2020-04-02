@@ -12,7 +12,7 @@ import java.util.Map;
 public class Scope {
     private Map<String, Entity> entityMap = new HashMap<>();
     private Scope father;
-    private boolean topLevel;
+    private boolean inLoop = false;
     private static final String varPrefix = "#var#";
     private static final String funcPrefix = "#func#";
     private static final String classPrefix = "#class#";
@@ -20,7 +20,6 @@ public class Scope {
 
     public Scope(Scope father) {
         this.father = father;
-        topLevel = this.father == null;
     }
 
     public Map<String, Entity> getEntityMap() {
@@ -31,8 +30,12 @@ public class Scope {
         return father;
     }
 
-    public boolean isTopLevel() {
-        return topLevel;
+    public boolean isInLoop() {
+        return inLoop;
+    }
+
+    public void setInLoop(boolean inLoop) {
+        this.inLoop = inLoop;
     }
 
     public boolean hasIdentifier(String identifier) {
@@ -94,6 +97,20 @@ public class Scope {
             return funcEntity;
         } else if (father != null) {
             return father.getFunc(identifier);
+        } else {
+            return null;
+        }
+    }
+
+    public Entity getVarFunc(String identifier) {
+        Entity varEntity = entityMap.get(varPrefix + identifier);
+        Entity funcEntity = entityMap.get(funcPrefix + identifier);
+        if (varEntity != null) {
+            return varEntity;
+        } else if (funcEntity != null) {
+            return funcEntity;
+        } else if (father != null) {
+            return father.getVarFunc(identifier);
         } else {
             return null;
         }

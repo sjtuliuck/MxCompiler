@@ -7,6 +7,7 @@ import com.frontend.ASTPrinter;
 import com.frontend.Scope;
 import com.frontend.semantic.ClassScanner;
 import com.frontend.semantic.GlobalScanner;
+import com.frontend.semantic.ScopeBuilder;
 import com.parser.*;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -17,7 +18,6 @@ import java.io.PrintStream;
 
 
 public class Main {
-
     public static void main(String[] args) throws Exception {
         PrintStream err = System.err;
         PrintStream out = System.out;
@@ -51,6 +51,8 @@ public class Main {
             globalScanner.visit(astRoot);
             ClassScanner classScanner = new ClassScanner(globalScope);
             classScanner.visit(astRoot);
+            ScopeBuilder scopeBuilder = new ScopeBuilder(globalScope);
+            scopeBuilder.visit(astRoot);
             out.println("Semantic finished!");
         } catch (Exception exception) {
             err.println(exception);

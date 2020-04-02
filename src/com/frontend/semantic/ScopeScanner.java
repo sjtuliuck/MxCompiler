@@ -18,11 +18,6 @@ public class ScopeScanner implements ASTVisitor {
     }
 
     @Override
-    public void visit(DefNode node) {
-
-    }
-
-    @Override
     public void visit(VarDefNode node) {
 
     }
@@ -159,6 +154,11 @@ public class ScopeScanner implements ASTVisitor {
 
     @Override
     public void visit(VarNode node) {
+
+    }
+
+    @Override
+    public void visit(VarListNode node) {
 
     }
 }

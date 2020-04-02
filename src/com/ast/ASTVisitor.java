@@ -4,7 +4,7 @@ public interface ASTVisitor {
     //
     void visit(ProgramNode node);
     //
-    void visit(DefNode node);
+//    void visit(DefNode node);
     void visit(VarDefNode node);
     void visit(ClassDefNode node);
     void visit(FuncDefNode node);
@@ -42,4 +42,5 @@ public interface ASTVisitor {
     void visit(TypeNode node);
     // VarNode
     void visit(VarNode node);
+    void visit(VarListNode node);
 }
