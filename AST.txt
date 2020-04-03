@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/jdk-11.0.6.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=56464:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/lck/Desktop/Compiler/out/production/Compiler:/Users/lck/Desktop/Compiler/lib/antlr-4.8-complete.jar com.Main
+/Library/Java/JavaVirtualMachines/jdk-11.0.6.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57003:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/lck/Desktop/Compiler/out/production/Compiler:/Users/lck/Desktop/Compiler/lib/antlr-4.8-complete.jar com.Main
 ParseTree finished!
 AST finished!
 <ProgramNode>
@@ -9,21 +9,36 @@ AST finished!
 		<BlockStmtNode>
 			<VarDefStmtNode>
 				<VarNode>
-					Type:array
+					Type:int
 					Identifier: a
-					<ArrayExprNode>
-						<NewExprNode>
-							TypeName:array
-							<IntConstNode>
-								Int value:2
-							Dim: 1
-						<IntConstNode>
-							Int value:0
+			<ExprStmtNode>
+				<PrefixExprNode>
+					op:preInc
+					<PostfixExprNode>
+						op:postInc
+						<PostfixExprNode>
+							op:postInc
+							<PrefixExprNode>
+								op:preInc
+								<PostfixExprNode>
+									op:postInc
+									<PostfixExprNode>
+										op:postInc
+										<PrefixExprNode>
+											op:preInc
+											<PrefixExprNode>
+												op:preInc
+												<IdentifierExprNode>
+													Identifier: a
+			<ExprStmtNode>
+				<PrefixExprNode>
+					op:preInc
+					<PostfixExprNode>
+						op:postInc
+						<IdentifierExprNode>
+							Identifier: a
 			<ReturnStmtNode>
-				<ArrayExprNode>
-					<IdentifierNode>
-						Identifier: a
-					<IntConstNode>
-						Int value:0
+				<IntConstNode>
+					Int value:0
 
 Process finished with exit code 0

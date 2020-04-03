@@ -1,6 +1,7 @@
 package com.frontend;
 
 import com.ast.*;
+import com.frontend.type.ClassType;
 import com.utility.Tools;
 
 import javax.tools.Tool;
@@ -160,7 +161,7 @@ public class ASTPrinter implements ASTVisitor {
 
     @Override
     public void visit(IdentifierExprNode node) {
-        puts("<IdentifierNode>");
+        puts("<IdentifierExprNode>");
         ++tab;
         Tools.printTab(tab);
         puts("Identifier: " + node.getIdentifier());
@@ -210,8 +211,14 @@ public class ASTPrinter implements ASTVisitor {
         ++tab;
         Tools.printTab(tab);
         puts("TypeName:" + node.getNewType().getTypeName());
-        for (ExprNode exprNode : node.getExprNodeList()) {
-            exprNode.dump(this, tab);
+        Tools.printTab(tab);
+        if (node.getNewType() instanceof ClassType) {
+            puts("Class: " + ((ClassType) node.getNewType()).getIdentifier());
+        }
+        if (node.getExprNodeList() != null) {
+            for (ExprNode exprNode : node.getExprNodeList()) {
+                exprNode.dump(this, tab);
+            }
         }
         Tools.printTab(tab);
         System.out.println("Dim: " + node.getDim());

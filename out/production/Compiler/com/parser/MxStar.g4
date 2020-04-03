@@ -27,7 +27,7 @@ param: type Identifier;
 //
 
 //------------------------ type -----------------------------------------------
-type: type Bracket
+type: type '[' ']'
     | nonArrayType
     ;
 
@@ -84,8 +84,8 @@ expr:
 constant: BoolConst | IntConst | StringConst | NullConst;
 
 creator:
-	nonArrayType ('[' expr ']')* Bracket+ ('[' expr ']')+	# errorCreator
-	| nonArrayType ('[' expr ']')+ Bracket*					# arrayCreator
+	nonArrayType ('[' expr ']')* ('[' ']')+ ('[' expr ']')+	# errorCreator
+	| nonArrayType ('[' expr ']')+ ('[' ']')*					# arrayCreator
 	| nonArrayType ('(' ')')?								# nonArrayCreator;
 
 //---------------------- reserved keyword --------------------------------------------

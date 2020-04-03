@@ -25,11 +25,16 @@ public class ScopeBuilder extends ScopeScanner {
         }
         varNode.getInitExpr().accept(this);
         if (varNode.getType().getType() instanceof VoidType || varNode.getInitExpr().getType() instanceof VoidType) {
-            throw new CompileError(varNode.getLocation(), "check var init 1");
-        }  else if (varNode.getInitExpr().getType() instanceof NullType && !(varNode.getType().getType() instanceof ArrayType || varNode.getType().getType() instanceof ClassType)) {
-            throw new CompileError(varNode.getLocation(), "check var init 2");
-        } else if (!(varNode.getType().getType().getTypeName().equals(varNode.getInitExpr().getType().getTypeName()))) {
-            throw new CompileError(varNode.getLocation(), "check var init 3");
+            throw new CompileError(varNode.getLocation(), "var init void error");
+        }
+        if ((varNode.getType().getType().getTypeName().equals(varNode.getInitExpr().getType().getTypeName()))) {
+            return;
+        }
+        if (varNode.getInitExpr().getType() instanceof NullType) {
+            if (!(varNode.getType().getType() instanceof ArrayType || varNode.getType().getType() instanceof ClassType))
+                throw new CompileError(varNode.getLocation(), "var int null error");
+        } else {
+            throw new CompileError(varNode.getLocation(), "check var init not the same type");
         }
     }
 
@@ -189,8 +194,6 @@ public class ScopeBuilder extends ScopeScanner {
                 node.getBodyStmt().accept(this);
                 currentScope = currentScope.getFather();
             }
-        } else {
-            throw new CompileError(node.getLocation(), "for no body");
         }
     }
 
@@ -350,6 +353,13 @@ public class ScopeBuilder extends ScopeScanner {
 
     @Override
     public void visit(NewExprNode node) {
+        if (node.getNewType() instanceof ClassType) {
+            String classIdentifier = ((ClassType) node.getNewType()).getIdentifier();
+            ClassEntity classEntity = currentScope.getClass(classIdentifier);
+            if (classEntity == null) {
+                throw new CompileError(node.getLocation(), "new expr class not defined");
+            }
+        }
         if (node.getDim() != 0) {
             if (node.getExprNodeList() != null) {
                 for (ExprNode exprNode : node.getExprNodeList()) {
@@ -375,7 +385,7 @@ public class ScopeBuilder extends ScopeScanner {
         if (!node.getExpr().isLvalue()) {
             throw new CompileError(node.getLocation(), "postfix can't be lvalue");
         }
-        node.setLvalue(true);
+        node.setLvalue(false);
         node.setType(intType);
     }
 
@@ -450,7 +460,7 @@ public class ScopeBuilder extends ScopeScanner {
             case bitwiseAnd:
             case bitwiseXor:
             case bitwiseOr:
-                if (!(ltype instanceof IntType || rtype instanceof IntType)) {
+                if (!(ltype instanceof IntType && rtype instanceof IntType)) {
                     throw new CompileError(node.getLocation(), "binary not int");
                 }
                 node.setLvalue(false);
@@ -471,7 +481,7 @@ public class ScopeBuilder extends ScopeScanner {
                 break;
             case equal:
             case neq:
-                if (!(ltype.equals(rtype))) {
+                if (!(ltype.getTypeName().equals(rtype.getTypeName()))) {
                     if ((rtype instanceof NullType) && !(ltype instanceof ArrayType || ltype instanceof ClassType)) {
                         throw new CompileError(node.getLocation(), "binary null error");
                     }
@@ -494,10 +504,10 @@ public class ScopeBuilder extends ScopeScanner {
                 if (!(node.getLhs().isLvalue())) {
                     throw new CompileError(node.getLocation(), "assign can't be lvalue");
                 }
-                if ((node.getRhs().getType() instanceof NullType) && !(node.getLhs().getType() instanceof ArrayType) || node.getLhs().getType() instanceof ClassType) {
-                    throw new CompileError(node.getLocation(), "assign null");
-                }
-                if (!node.getLhs().getType().equals(node.getRhs().getType())) {
+                if (node.getRhs().getType() instanceof NullType) {
+                    if (!(node.getLhs().getType() instanceof ArrayType) || node.getLhs().getType() instanceof ClassType)
+                        throw new CompileError(node.getLocation(), "assign null");
+                } else if (!node.getLhs().getType().getTypeName().equals(node.getRhs().getType().getTypeName())) {
                     throw new CompileError(node.getLocation(), "assign type not the same");
                 }
                 node.setLvalue(false);
