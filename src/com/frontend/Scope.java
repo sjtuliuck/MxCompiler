@@ -128,5 +128,18 @@ public class Scope {
         }
     }
 
+    public VarEntity getLocalVar(String identifier) {
+        VarEntity varEntity = (VarEntity) entityMap.get(varPrefix + identifier);
+        return varEntity;
+    }
 
+    public Entity getLocalVarFunc(String identifier) {
+        Entity varEntity = entityMap.get(varPrefix + identifier);
+        Entity funcEntity = entityMap.get(funcPrefix + identifier);
+        if (varEntity != null) {
+            return varEntity;
+        } else {
+            return funcEntity;
+        }
+    }
 }

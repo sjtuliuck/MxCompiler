@@ -43,9 +43,12 @@ public class ScopeBuilder extends ScopeScanner {
     // fixme
     @Override
     public void visit(VarDefNode node) {
-        for (VarNode varNode : node.getVarNodeList()) {
-            varNode.accept(this);
+        if (node.getVarNodeList() != null) {
+            for (VarNode varNode : node.getVarNodeList()) {
+                varNode.accept(this);
+            }
         }
+
     }
 
     @Override
@@ -87,9 +90,14 @@ public class ScopeBuilder extends ScopeScanner {
         currentScope = currentScope.getFather();
     }
 
+    // fixme
     @Override
     public void visit(VarDefStmtNode node) {
-        // todo
+        if (node.getVarNodeList() != null) {
+            for (VarNode varNode : node.getVarNodeList()) {
+                varNode.accept(this);
+            }
+        }
     }
 
     @Override
@@ -228,10 +236,10 @@ public class ScopeBuilder extends ScopeScanner {
         }
     }
 
-    // todo
+
     @Override
     public void visit(ExprListNode node) {
-        super.visit(node);
+        // empty
     }
 
     @Override
@@ -260,7 +268,27 @@ public class ScopeBuilder extends ScopeScanner {
 
     @Override
     public void visit(MemberExprNode node) {
-        // todo
+        node.getExpr().accept(this);
+        String identifier;
+        if (node.getExpr().getType() instanceof ArrayType) {
+            identifier = "#array#";
+        } else if (node.getExpr().getType() instanceof StringType) {
+            identifier = "#string#";
+        } else if (node.getExpr().getType() instanceof ClassType) {
+            identifier = ((ClassType) node.getExpr().getType()).getIdentifier();
+        } else {
+            throw new CompileError(node.getLocation(), "member expr error");
+        }
+        ClassEntity classEntity = currentScope.getClass(identifier);
+        if (classEntity == null) {
+            throw new CompileError(node.getLocation(), "member expr no class entity");
+        }
+        // fixme
+        VarEntity varEntity = classEntity.getClassScope().getLocalVar(node.getIdentifier());
+        if (varEntity == null) {
+            throw new CompileError(node.getLocation(), "no such member");
+        }
+        node.setLvalue(true);
     }
 
     @Override
@@ -279,27 +307,156 @@ public class ScopeBuilder extends ScopeScanner {
 
     @Override
     public void visit(FuncExprNode node) {
+        node.getExpr().accept(this);
+        if (!(node.getExpr().getType() instanceof FuncType)) {
+            throw new CompileError(node.getLocation(), "func expr not a function");
+        }
+        FuncEntity funcEntity = currentFuncCallEntity;
         // todo
     }
 
     @Override
     public void visit(NewExprNode node) {
+        if (node.getDim() != 0) {
+            if (node.getExprNodeList() != null) {
+                for (ExprNode exprNode : node.getExprNodeList()) {
+                    exprNode.accept(this);
+                    if (!(exprNode.getType() instanceof IntType)) {
+                        throw new CompileError(node.getLocation(), "new index not int");
+                    }
+                }
+            }
+        }
         // todo
     }
 
     @Override
     public void visit(PostfixExprNode node) {
-        super.visit(node);
+        // postInc, postDec
+        node.getExpr().accept(this);
+        Type type = node.getExpr().getType();
+        if (!(type instanceof IntType)) {
+            throw new CompileError(node.getLocation(), "postfix not int ++--");
+        }
+        if (!node.getExpr().isLvalue()) {
+            throw new CompileError(node.getLocation(), "postfix can't be lvalue");
+        }
+        node.setLvalue(true);
+        node.setType(intType);
     }
 
     @Override
     public void visit(PrefixExprNode node) {
-        super.visit(node);
+        // preInc, preDec, signPos, signNeg, bitwiseNot, logicNot
+        node.getExpr().accept(this);
+        Type type = node.getExpr().getType();
+        PrefixExprNode.PreOp op = node.getOp();
+        switch (op) {
+            case preInc:
+            case preDec:
+                if (!(type instanceof IntType)) {
+                    throw new CompileError(node.getLocation(), "prefix not int ++--");
+                }
+                if (!node.getExpr().isLvalue()) {
+                    throw new CompileError(node.getLocation(), "prefix cant't be lvalue");
+                }
+                node.setLvalue(true);
+                node.setType(intType);
+                break;
+            case signPos:
+            case signNeg:
+            case bitwiseNot:
+                if (!(type instanceof IntType)) {
+                    throw new CompileError(node.getLocation(), "prefix not int +-~");
+                }
+                node.setLvalue(false);
+                node.setType(intType);
+                break;
+            case logicNot:
+                if (!(type instanceof BoolType)) {
+                    throw new CompileError(node.getLocation(), "prefix not bool !");
+                }
+                break;
+        }
     }
 
+//    mul, div, mod,
+//    add, sub,
+//    shiftRight, shiftLeft,
+//    less, greater, leq, geq,
+//    neq, equal,
+//    bitwiseAnd, bitwiseXor, bitwiseOr,
+//    logicAnd, logicOr,
+//    assign
     @Override
     public void visit(BinaryExprNode node) {
-        super.visit(node);
+        node.getLhs().accept(this);
+        Type ltype = node.getLhs().getType();
+        node.getRhs().accept(this);
+        Type rtype = node.getRhs().getType();
+        if (ltype instanceof VoidType || rtype instanceof VoidType) {
+            throw new CompileError(node.getLocation(), "binary expr void");
+        }
+        BinaryExprNode.BinOp op = node.getOp();
+        switch (op) {
+            case add:
+                if (ltype instanceof StringType && rtype instanceof StringType) {
+                    node.setLvalue(false);
+                    node.setType(stringType);
+                    break;
+                }
+            case sub:
+            case mul:
+            case div:
+            case mod:
+            case shiftRight:
+            case shiftLeft:
+            case bitwiseAnd:
+            case bitwiseXor:
+            case bitwiseOr:
+                if (!(ltype instanceof IntType || rtype instanceof IntType)) {
+                    throw new CompileError(node.getLocation(), "binary not int");
+                }
+                node.setLvalue(false);
+                node.setType(intType);
+                break;
+            case less:
+            case greater:
+            case logicAnd:
+            case logicOr:
+                if (!(ltype.equals(rtype))) {
+                    throw new CompileError(node.getLocation(), "binary not comparable");
+                }
+                if (!(ltype instanceof IntType || ltype instanceof StringType)) {
+                    throw new CompileError(node.getLocation(), "binary not int/string");
+                }
+                node.setLvalue(false);
+                node.setType(boolType);
+                break;
+            case leq:
+            case geq:
+                if (!(ltype.equals(rtype))) {
+                    if ((rtype instanceof NullType) && !(ltype instanceof ArrayType || ltype instanceof ClassType)) {
+                        throw new CompileError(node.getLocation(), "binary null error");
+                    }
+                }
+                node.setLvalue(false);
+                node.setType(boolType);
+                break;
+            case assign:
+                if (!(node.getLhs().isLvalue())) {
+                    throw new CompileError(node.getLocation(), "assign can't be lvalue");
+                }
+                if ((node.getRhs().getType() instanceof NullType) && !(node.getLhs().getType() instanceof ArrayType) || node.getLhs().getType() instanceof ClassType) {
+                    throw new CompileError(node.getLocation(), "assign null");
+                }
+                if (!node.getLhs().getType().equals(node.getRhs().getType())) {
+                    throw new CompileError(node.getLocation(), "assign type not the same");
+                }
+                node.setLvalue(false);
+                node.setType(ltype);
+                break;
+        }
     }
 
     @Override
@@ -328,16 +485,24 @@ public class ScopeBuilder extends ScopeScanner {
 
     @Override
     public void visit(TypeNode node) {
-        super.visit(node);
+        // empty
     }
 
     @Override
     public void visit(VarNode node) {
-        super.visit(node);
+        if ((node.getType().getType() instanceof ClassType) && (currentScope.getClass(((ClassType) node.getType().getType()).getIdentifier())) == null) {
+            throw new CompileError(node.getLocation(), "class identifier not defined");
+        }
+        checkVarInitExpr(node);
+        VarEntity varEntity = new VarEntity(node);
+        if (currentScope.getFather() == null) {
+            varEntity.setInGlobal(true);
+        }
+        currentScope.addVar(varEntity);
     }
 
     @Override
     public void visit(VarListNode node) {
-        super.visit(node);
+        // empty
     }
 }

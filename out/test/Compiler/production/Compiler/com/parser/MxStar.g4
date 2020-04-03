@@ -110,12 +110,13 @@ NewLine: ('\r' '\n'? | '\n') -> skip;
 LineComment: '//' ~ [\r\n]* -> skip;
 BlockComment: '/*' .*? '*/' -> skip;
 
-// identifier
-Identifier: [a-zA-Z] [a-zA-Z0-9_]*;
-
 // constant
 BoolConst: 'true' | 'false';
 IntConst: [1-9] [0-9]* | '0';
 StringConst: '"' (~["\\\r\n] | '\\' ["n\\])* '"';
 NullConst: 'null';
+
+// identifier
+Identifier: [a-zA-Z] [a-zA-Z0-9_]*;
+
 

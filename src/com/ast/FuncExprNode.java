@@ -14,6 +14,18 @@ public class FuncExprNode extends ExprNode {
         this.paramList = paramList;
     }
 
+    public ExprNode getExpr() {
+        return expr;
+    }
+
+    public List<ExprNode> getParamList() {
+        return paramList;
+    }
+
+    public void setExpr(ExprNode expr) {
+        this.expr = expr;
+    }
+
     public void setParamList(List<ExprNode> paramList) {
         this.paramList = paramList;
     }
