@@ -419,11 +419,14 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
         Location location = new Location(ctx);
         Type newType = ((TypeNode) visit(ctx.nonArrayType())).getType();
         int dim = 0;
+//        System.out.println(ctx.children.size());
         for (var child : ctx.children) {
-            if (child.getText().equals("[")) {
+//            System.out.println(child.getText());
+            if (child.getText().equals("[") || child.getText().equals("[]")) {
                 ++dim;
             }
         }
+//        System.out.println(dim);
         List<ExprNode> exprNodeList = new ArrayList<>();
         for (var expr : ctx.expr()) {
             ExprNode exprNode = (ExprNode) visit(expr);

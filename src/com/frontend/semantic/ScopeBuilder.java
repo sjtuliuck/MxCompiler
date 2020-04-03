@@ -230,6 +230,9 @@ public class ScopeBuilder extends ScopeScanner {
     @Override
     public void visit(BlockStmtNode node) {
         Scope blockScope = new Scope(currentScope);
+        if (currentScope.isInLoop()) {
+            blockScope.setInLoop(true);
+        }
         currentScope = blockScope;
         for (StmtNode stmtNode : node.getStmtNodeList()) {
             stmtNode.accept(this);
@@ -407,6 +410,8 @@ public class ScopeBuilder extends ScopeScanner {
                 if (!(type instanceof BoolType)) {
                     throw new CompileError(node.getLocation(), "prefix not bool !");
                 }
+                node.setLvalue(false);
+                node.setType(boolType);
                 break;
         }
     }
@@ -455,7 +460,7 @@ public class ScopeBuilder extends ScopeScanner {
             case greater:
             case leq:
             case geq:
-                if (!(ltype.equals(rtype))) {
+                if (!(ltype.getTypeName().equals(rtype.getTypeName()))) {
                     throw new CompileError(node.getLocation(), "binary not comparable");
                 }
                 if (!(ltype instanceof IntType || ltype instanceof StringType)) {
@@ -482,6 +487,9 @@ public class ScopeBuilder extends ScopeScanner {
                 if (!(ltype instanceof BoolType)) {
                     throw new CompileError(node.getLocation(), "logic op not bool");
                 }
+                node.setLvalue(false);
+                node.setType(boolType);
+                break;
             case assign:
                 if (!(node.getLhs().isLvalue())) {
                     throw new CompileError(node.getLocation(), "assign can't be lvalue");

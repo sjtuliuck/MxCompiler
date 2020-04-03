@@ -91,7 +91,8 @@ public class ASTPrinter implements ASTVisitor {
         ++tab;
         node.getCondExpr().dump(this, tab);
         node.getThenStmt().dump(this, tab);
-        node.getElseStmt().dump(this, tab);
+        if (node.getElseStmt() != null)
+            node.getElseStmt().dump(this, tab);
         --tab;
     }
 
@@ -108,9 +109,12 @@ public class ASTPrinter implements ASTVisitor {
     public void visit(ForStmtNode node) {
         puts("<ForStmtNode>");
         ++tab;
-        node.getInitExpr().dump(this, tab);
-        node.getCondExpr().dump(this, tab);
-        node.getStepExpr().dump(this, tab);
+        if (node.getInitExpr() != null)
+            node.getInitExpr().dump(this, tab);
+        if (node.getCondExpr() != null)
+            node.getCondExpr().dump(this, tab);
+        if (node.getStepExpr() != null)
+            node.getStepExpr().dump(this, tab);
         node.getBodyStmt().dump(this ,tab);
         --tab;
     }
@@ -119,7 +123,8 @@ public class ASTPrinter implements ASTVisitor {
     public void visit(ReturnStmtNode node) {
         puts("<ReturnStmtNode>");
         ++tab;
-        node.getRetExpr().dump(this, tab);
+        if (node.getRetExpr() != null)
+            node.getRetExpr().dump(this, tab);
         --tab;
     }
 
@@ -208,6 +213,8 @@ public class ASTPrinter implements ASTVisitor {
         for (ExprNode exprNode : node.getExprNodeList()) {
             exprNode.dump(this, tab);
         }
+        Tools.printTab(tab);
+        System.out.println("Dim: " + node.getDim());
         --tab;
     }
 
