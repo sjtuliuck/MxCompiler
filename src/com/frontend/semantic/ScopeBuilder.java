@@ -504,10 +504,20 @@ public class ScopeBuilder extends ScopeScanner {
                 if (!(node.getLhs().isLvalue())) {
                     throw new CompileError(node.getLocation(), "assign can't be lvalue");
                 }
-                if (node.getRhs().getType() instanceof NullType) {
-                    if (!(node.getLhs().getType() instanceof ArrayType) || node.getLhs().getType() instanceof ClassType)
-                        throw new CompileError(node.getLocation(), "assign null");
-                } else if (!node.getLhs().getType().getTypeName().equals(node.getRhs().getType().getTypeName())) {
+                if (ltype instanceof ArrayType && rtype instanceof ArrayType) {
+                    Type lType = ((ArrayType) ltype).getArrayType();
+                    Type rType = ((ArrayType) rtype).getArrayType();
+                    while (lType instanceof ArrayType && rType instanceof ArrayType) {
+                        lType = ((ArrayType) lType).getArrayType();
+                        rType = ((ArrayType) rType).getArrayType();
+                    }
+                    if (!lType.getTypeName().equals(rType.getTypeName())) {
+                        throw new CompileError("assign array error");
+                    }
+                } else if (rtype instanceof NullType) {
+                    if (!(ltype instanceof ArrayType || ltype instanceof ClassType))
+                        throw new CompileError(node.getLocation(), "assign null error");
+                } else if (!ltype.getTypeName().equals(rtype.getTypeName())) {
                     throw new CompileError(node.getLocation(), "assign type not the same");
                 }
                 node.setLvalue(false);

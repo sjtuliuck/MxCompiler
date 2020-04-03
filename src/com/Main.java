@@ -9,6 +9,7 @@ import com.frontend.semantic.ClassScanner;
 import com.frontend.semantic.GlobalScanner;
 import com.frontend.semantic.ScopeBuilder;
 import com.parser.*;
+import com.utility.ErrorHandler;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
 
@@ -24,6 +25,7 @@ public class Main {
         String fileName;
         fileName = "test.mx";
 
+        ErrorHandler errorHandler = new ErrorHandler();
         InputStream inputStream;
         CharStream input;
         try {
@@ -36,10 +38,16 @@ public class Main {
 
         try {
             MxStarLexer lexer = new MxStarLexer(input);
+            lexer.removeErrorListeners();
+            lexer.addErrorListener(new MxStarErrorListener(errorHandler));
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MxStarParser parser = new MxStarParser(tokens);
-            parser.setErrorHandler(new BailErrorStrategy());
+            parser.removeErrorListeners();
+            parser.addErrorListener(new MxStarErrorListener(errorHandler));
             ParseTree parseTree = parser.program();
+            if (errorHandler.getErrorCnt() > 0) {
+                throw new RuntimeException();
+            }
             out.println("ParseTree finished!");
             //
             ASTBuilder astBuilder = new ASTBuilder(null);

@@ -32,8 +32,6 @@ type: type '[' ']'
     ;
 
 
-Bracket: '[' ']';
-
 nonArrayType: Bool | Int | String | Identifier;
 
 //---------------------------- statement ------------------------------------------
@@ -84,9 +82,9 @@ expr:
 constant: BoolConst | IntConst | StringConst | NullConst;
 
 creator:
-	nonArrayType ('[' expr ']')* ('[' ']')+ ('[' expr ']')+	# errorCreator
+	nonArrayType ('[' expr ']')* ('[' ']')+ ('[' expr ']')+	    # errorCreator
 	| nonArrayType ('[' expr ']')+ ('[' ']')*					# arrayCreator
-	| nonArrayType ('(' ')')?								# nonArrayCreator;
+	| nonArrayType ('(' ')')?								    # nonArrayCreator;
 
 //---------------------- reserved keyword --------------------------------------------
 Bool: 'bool';
