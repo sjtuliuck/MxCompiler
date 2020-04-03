@@ -1,23 +1,24 @@
 package com.ast;
 
+import com.frontend.type.Type;
 import com.utility.Location;
 
 import java.util.List;
 
 public class NewExprNode extends ExprNode {
-    private String identifier;
+    private Type newType;
     private List<ExprNode> exprNodeList;
     private int dim;
 
-    public NewExprNode(Location location, String identifier, List<ExprNode> exprNodeList, int dim) {
+    public NewExprNode(Location location, Type newType, List<ExprNode> exprNodeList, int dim) {
         super(location);
-        this.identifier = identifier;
+        this.newType = newType;
         this.exprNodeList = exprNodeList;
         this.dim = dim;
     }
 
-    public String getIdentifier() {
-        return identifier;
+    public Type getNewType() {
+        return newType;
     }
 
     public List<ExprNode> getExprNodeList() {
@@ -28,6 +29,18 @@ public class NewExprNode extends ExprNode {
         return dim;
     }
 
+    public void setNewType(Type newType) {
+        this.newType = newType;
+    }
+
+    public void setExprNodeList(List<ExprNode> exprNodeList) {
+        this.exprNodeList = exprNodeList;
+    }
+
+    public void setDim(int dim) {
+        this.dim = dim;
+    }
+
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
@@ -36,7 +49,7 @@ public class NewExprNode extends ExprNode {
     @Override
     public String toString() {
         return "NewExprNode{" +
-                "identifier='" + identifier + '\'' +
+                "newType=" + newType +
                 ", exprNodeList=" + exprNodeList +
                 ", dim=" + dim +
                 '}';

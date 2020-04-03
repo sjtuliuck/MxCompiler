@@ -1,5 +1,6 @@
 package com.ast;
 
+import com.frontend.entity.FuncEntity;
 import com.utility.Location;
 
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 public class FuncExprNode extends ExprNode {
     private ExprNode expr;
     private List<ExprNode> paramList;
+    FuncEntity funcEntity;
 
     public FuncExprNode(Location location, ExprNode expr, List<ExprNode> paramList) {
         super(location);
@@ -22,12 +24,20 @@ public class FuncExprNode extends ExprNode {
         return paramList;
     }
 
+    public FuncEntity getFuncEntity() {
+        return funcEntity;
+    }
+
     public void setExpr(ExprNode expr) {
         this.expr = expr;
     }
 
     public void setParamList(List<ExprNode> paramList) {
         this.paramList = paramList;
+    }
+
+    public void setFuncEntity(FuncEntity funcEntity) {
+        this.funcEntity = funcEntity;
     }
 
     @Override

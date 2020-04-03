@@ -364,6 +364,7 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
         ExprNode rhs = (ExprNode) visit(ctx.rhs);
         BinaryExprNode binaryExprNode = new BinaryExprNode(location, null, lhs, rhs);
         String bop = ctx.bop.getText();
+//        System.out.println(location.toString() + bop);
         binaryExprNode.setOp(bop);
         return binaryExprNode;
     }
@@ -419,21 +420,21 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     @Override
     public Node visitArrayCreator(MxStarParser.ArrayCreatorContext ctx) {
         Location location = new Location(ctx);
-        String identifier = ctx.nonArrayType().getText();
+        Type newType = ((TypeNode) visit(ctx.nonArrayType())).getType();
         int dim = ctx.Bracket().size();
         List<ExprNode> exprNodeList = new ArrayList<>();
         for (var expr : ctx.expr()) {
             ExprNode exprNode = (ExprNode) visit(expr);
             exprNodeList.add(exprNode);
         }
-        return new NewExprNode(location, identifier, exprNodeList, dim);
+        return new NewExprNode(location, newType, exprNodeList, dim);
     }
 
     @Override
     public Node visitNonArrayCreator(MxStarParser.NonArrayCreatorContext ctx) {
         Location location = new Location(ctx);
-        String identifier = ctx.nonArrayType().getText();
-        return new NewExprNode(location, identifier, null, 0);
+        Type newType = ((TypeNode) visit(ctx.nonArrayType())).getType();
+        return new NewExprNode(location, newType, null, 0);
     }
 
 }

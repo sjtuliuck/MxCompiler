@@ -312,7 +312,33 @@ public class ScopeBuilder extends ScopeScanner {
             throw new CompileError(node.getLocation(), "func expr not a function");
         }
         FuncEntity funcEntity = currentFuncCallEntity;
-        // todo
+        node.setFuncEntity(funcEntity);
+        int paramNum;
+        if (funcEntity.getParamList() != null && node.getParamList() != null) {
+            if (funcEntity.isInClass()) {
+                paramNum = funcEntity.getParamList().size() - 1;
+            } else {
+                paramNum = funcEntity.getParamList().size();
+            }
+            if (paramNum != node.getParamList().size()) {
+                throw new CompileError(node.getLocation(), "func param number error");
+            }
+            for (int i = 0; i < paramNum; ++i) {
+                Type paramType = funcEntity.getParamList().get(i).getType();
+                node.getParamList().get(i).accept(this);
+                if (node.getParamList().get(i).getType() instanceof VoidType) {
+                    throw new CompileError(node.getLocation(), "func param void type");
+                }
+                if ((node.getParamList().get(i).getType() instanceof NullType) && !(paramType instanceof ArrayType || paramType instanceof ClassType)) {
+                    throw new CompileError(node.getLocation(), "func param null type error");
+                }
+                if (!node.getParamList().get(i).getType().equals(paramType)) {
+                    throw new CompileError(node.getLocation(), "func param type not match");
+                }
+            }
+        }
+        node.setLvalue(false);
+        node.setType(funcEntity.getRetType());
     }
 
     @Override
@@ -327,7 +353,8 @@ public class ScopeBuilder extends ScopeScanner {
                 }
             }
         }
-        // todo
+        node.setLvalue(false);
+        node.setType(node.getNewType());
     }
 
     @Override
@@ -456,6 +483,8 @@ public class ScopeBuilder extends ScopeScanner {
                 node.setLvalue(false);
                 node.setType(ltype);
                 break;
+            default:
+                throw new CompileError(node.getLocation(), "binary op invalid");
         }
     }
 

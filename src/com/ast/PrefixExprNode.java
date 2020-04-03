@@ -1,5 +1,6 @@
 package com.ast;
 
+import com.utility.CompileError;
 import com.utility.Location;
 
 public class PrefixExprNode extends ExprNode {
@@ -44,6 +45,8 @@ public class PrefixExprNode extends ExprNode {
             case "!":
                 op = PreOp.logicNot;
                 break;
+            default:
+                throw new CompileError("pre op invalid");
         }
     }
 

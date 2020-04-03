@@ -1,5 +1,6 @@
 package com.ast;
 
+import com.utility.CompileError;
 import com.utility.Location;
 
 public class BinaryExprNode extends ExprNode {
@@ -47,6 +48,12 @@ public class BinaryExprNode extends ExprNode {
             case "%":
                 op = BinOp.mod;
                 break;
+            case "+":
+                op = BinOp.add;
+                break;
+            case "-":
+                op = BinOp.sub;
+                break;
             case ">>":
                 op = BinOp.shiftRight;
                 break;
@@ -89,6 +96,8 @@ public class BinaryExprNode extends ExprNode {
             case "=":
                 op = BinOp.assign;
                 break;
+            default:
+                throw new CompileError("bop invalid:" + opt);
         }
     }
 

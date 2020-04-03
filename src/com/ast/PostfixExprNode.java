@@ -1,5 +1,6 @@
 package com.ast;
 
+import com.utility.CompileError;
 import com.utility.Location;
 
 public class PostfixExprNode extends ExprNode {
@@ -25,10 +26,12 @@ public class PostfixExprNode extends ExprNode {
     }
 
     public void setOp(String opt) {
-        if (opt == "++") {
+        if (opt.equals("++")) {
             op = PostOp.postInc;
-        } else if (opt == "--") {
+        } else if (opt.equals("--")) {
             op = PostOp.postDec;
+        } else {
+            throw new CompileError("post op invalid");
         }
     }
 
