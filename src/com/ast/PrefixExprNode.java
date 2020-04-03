@@ -1,7 +1,9 @@
 package com.ast;
 
+import com.frontend.ASTPrinter;
 import com.utility.CompileError;
 import com.utility.Location;
+import com.utility.Tools;
 
 public class PrefixExprNode extends ExprNode {
     public enum PreOp {
@@ -53,6 +55,12 @@ public class PrefixExprNode extends ExprNode {
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
+    }
+
+    @Override
+    public void dump(ASTPrinter printer, int tab) {
+        Tools.printTab(tab);
+        printer.visit(this);
     }
 
     @Override

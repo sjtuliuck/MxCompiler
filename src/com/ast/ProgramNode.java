@@ -1,6 +1,8 @@
 package com.ast;
 
 import java.util.*;
+
+import com.frontend.ASTPrinter;
 import com.utility.*;
 
 public class ProgramNode extends Node {
@@ -25,9 +27,13 @@ public class ProgramNode extends Node {
     }
 
     @Override
+    public void dump(ASTPrinter printer, int tab) {
+        Tools.printTab(tab);
+        printer.visit(this);
+    }
+
+    @Override
     public String toString() {
-        return "ProgramNode{" +
-                "defNodeList=" + defNodeList +
-                '}';
+        return "<<AST ProgramNode>>\n" + defNodeList;
     }
 }

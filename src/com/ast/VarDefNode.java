@@ -1,5 +1,6 @@
 package com.ast;
 
+import com.frontend.ASTPrinter;
 import com.utility.*;
 
 import java.util.List;
@@ -22,9 +23,13 @@ public class VarDefNode extends DefNode {
     }
 
     @Override
+    public void dump(ASTPrinter printer, int tab) {
+        Tools.printTab(tab);
+        printer.visit(this);
+    }
+
+    @Override
     public String toString() {
-        return "VarDefNode{" +
-                "varNodeList=" + varNodeList +
-                '}';
+        return "variable:\n" + varNodeList;
     }
 }

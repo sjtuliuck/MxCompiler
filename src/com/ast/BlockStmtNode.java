@@ -1,7 +1,9 @@
 package com.ast;
 
+import com.frontend.ASTPrinter;
 import com.frontend.Scope;
 import com.utility.Location;
+import com.utility.Tools;
 
 import java.util.List;
 
@@ -33,6 +35,12 @@ public class BlockStmtNode extends StmtNode {
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
+    }
+
+    @Override
+    public void dump(ASTPrinter printer, int tab) {
+        Tools.printTab(tab);
+        printer.visit(this);
     }
 
     @Override

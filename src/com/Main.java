@@ -45,15 +45,17 @@ public class Main {
             ASTBuilder astBuilder = new ASTBuilder(null);
             ProgramNode astRoot = (ProgramNode) astBuilder.visit(parseTree);
             out.println("AST finished!");
+            ASTPrinter astPrinter = new ASTPrinter();
+            astPrinter.visit(astRoot);
             //
-            Scope globalScope = new Scope(null);
-            GlobalScanner globalScanner = new GlobalScanner(globalScope);
-            globalScanner.visit(astRoot);
-            ClassScanner classScanner = new ClassScanner(globalScope);
-            classScanner.visit(astRoot);
-            ScopeBuilder scopeBuilder = new ScopeBuilder(globalScope);
-            scopeBuilder.visit(astRoot);
-            out.println("Semantic finished!");
+//            Scope globalScope = new Scope(null);
+//            GlobalScanner globalScanner = new GlobalScanner(globalScope);
+//            globalScanner.visit(astRoot);
+//            ClassScanner classScanner = new ClassScanner(globalScope);
+//            classScanner.visit(astRoot);
+//            ScopeBuilder scopeBuilder = new ScopeBuilder(globalScope);
+//            scopeBuilder.visit(astRoot);
+//            out.println("Semantic finished!");
         } catch (Exception exception) {
             err.println(exception);
             System.exit(1);

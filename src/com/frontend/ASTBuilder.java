@@ -429,7 +429,10 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
             ExprNode exprNode = (ExprNode) visit(expr);
             exprNodeList.add(exprNode);
         }
-        return new NewExprNode(location, new ArrayType(newType), exprNodeList, dim);
+        for (int i = 0; i < dim; ++i) {
+            newType = new ArrayType(newType);
+        }
+        return new NewExprNode(location, newType, exprNodeList, dim);
     }
 
     @Override

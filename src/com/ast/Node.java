@@ -1,5 +1,6 @@
 package com.ast;
 
+import com.frontend.ASTPrinter;
 import com.utility.Location;
 
 abstract public class Node {
@@ -14,4 +15,6 @@ abstract public class Node {
     }
 
     abstract public void accept(ASTVisitor visitor);
+
+    abstract public void dump(ASTPrinter printer, int tab);
 }

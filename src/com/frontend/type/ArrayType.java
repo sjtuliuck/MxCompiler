@@ -20,6 +20,7 @@ public class ArrayType extends Type {
         return (obj.getClass() == ArrayType.class) && ((ArrayType) obj).getArrayType().equals(arrayType);
     }
 
+
     @Override
     public String toString() {
         return "ArrayType{" +
