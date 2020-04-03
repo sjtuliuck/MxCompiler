@@ -28,7 +28,7 @@ public class ScopeBuilder extends ScopeScanner {
             throw new CompileError(varNode.getLocation(), "check var init 1");
         }  else if (varNode.getInitExpr().getType() instanceof NullType && !(varNode.getType().getType() instanceof ArrayType || varNode.getType().getType() instanceof ClassType)) {
             throw new CompileError(varNode.getLocation(), "check var init 2");
-        } else if (!varNode.getType().getType().equals(varNode.getInitExpr().getType())) {
+        } else if (!(varNode.getType().getType().getTypeName().equals(varNode.getInitExpr().getType().getTypeName()))) {
             throw new CompileError(varNode.getLocation(), "check var init 3");
         }
     }

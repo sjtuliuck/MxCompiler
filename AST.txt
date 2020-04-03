@@ -1,0 +1,160 @@
+/Library/Java/JavaVirtualMachines/jdk-11.0.6.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=56124:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/lck/Desktop/Compiler/out/production/Compiler:/Users/lck/Desktop/Compiler/lib/antlr-4.8-complete.jar com.Main
+ParseTree finished!
+AST finished!
+<ProgramNode>
+	<FuncDefNode>
+		name:f
+		<TypeNode>
+			Type: int
+		<BlockStmtNode>
+			<VarDefStmtNode>
+				<VarNode>
+					Type:array
+					Identifier: a
+					<ArrayExprNode>
+						<ArrayExprNode>
+							<NewExprNode>
+								TypeName:array
+								<IntConstNode>
+									Int value:2
+								<IntConstNode>
+									Int value:3
+								<IntConstNode>
+									Int value:3
+							<IntConstNode>
+								Int value:0
+						<IntConstNode>
+							Int value:1
+			<BlockStmtNode>
+				<VarDefStmtNode>
+					<VarNode>
+						Type:string
+						Identifier: b
+						<ArrayExprNode>
+							<NewExprNode>
+								TypeName:array
+								<IntConstNode>
+									Int value:3
+							<IntConstNode>
+								Int value:0
+				<BlockStmtNode>
+					<VarDefStmtNode>
+						<VarNode>
+							Type:int
+							Identifier: c
+							<FuncExprNode>
+								<MemberExprNode>
+									<ArrayExprNode>
+										<ArrayExprNode>
+											<ArrayExprNode>
+												<NewExprNode>
+													TypeName:array
+													<IntConstNode>
+														Int value:3
+													<IntConstNode>
+														Int value:3
+													<IntConstNode>
+														Int value:3
+												<IntConstNode>
+													Int value:0
+											<IntConstNode>
+												Int value:1
+										<IntConstNode>
+											Int value:2
+									Identifier:length
+					<ReturnStmtNode>
+						<IdentifierNode>
+							Identifier: c
+	<FuncDefNode>
+		name:main
+		<TypeNode>
+			Type: int
+		<BlockStmtNode>
+			<VarDefStmtNode>
+				<VarNode>
+					Type:string
+					Identifier: a
+					<StringConstNode>
+						String value:"abc"
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierNode>
+						Identifier: print
+					<IdentifierNode>
+						Identifier: a
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierNode>
+						Identifier: println
+					<FuncExprNode>
+						<IdentifierNode>
+							Identifier: toString
+						<FuncExprNode>
+							<MemberExprNode>
+								<IdentifierNode>
+									Identifier: a
+								Identifier:length
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierNode>
+						Identifier: print
+					<FuncExprNode>
+						<IdentifierNode>
+							Identifier: getString
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierNode>
+						Identifier: print
+					<FuncExprNode>
+						<IdentifierNode>
+							Identifier: toString
+						<IntConstNode>
+							Int value:3
+			<VarDefStmtNode>
+				<VarNode>
+					Type:string
+					Identifier: c
+					<FuncExprNode>
+						<MemberExprNode>
+							<IdentifierNode>
+								Identifier: a
+							Identifier:substring
+						<IntConstNode>
+							Int value:0
+						<IntConstNode>
+							Int value:10
+			<VarDefStmtNode>
+				<VarNode>
+					Type:int
+					Identifier: b
+					<FuncExprNode>
+						<MemberExprNode>
+							<IdentifierNode>
+								Identifier: a
+							Identifier:parseInt
+			<BlockStmtNode>
+				<VarDefStmtNode>
+					<VarNode>
+						Type:int
+						Identifier: b
+						<FuncExprNode>
+							<MemberExprNode>
+								<IdentifierNode>
+									Identifier: a
+								Identifier:ord
+							<IntConstNode>
+								Int value:3
+				<BlockStmtNode>
+					<VarDefStmtNode>
+						<VarNode>
+							Type:string
+							Identifier: b
+				<ReturnStmtNode>
+					<IdentifierNode>
+						Identifier: b
+			<ReturnStmtNode>
+				<FuncExprNode>
+					<IdentifierNode>
+						Identifier: getInt
+
+Process finished with exit code 0

@@ -63,11 +63,11 @@ public class GlobalScanner extends ScopeScanner {
         params.add(new VarEntity("left", intType));
         params.add(new VarEntity("right", intType));
         params.add(new VarEntity("this", stringEntity.getType()));
-        addBuildInFunc(stringScope, intType, "substring", params);
+        addBuildInFunc(stringScope, stringType, "substring", params);
         // int parseInt()
         params = new ArrayList<>();
         params.add(new VarEntity("this", stringEntity.getType()));
-        addBuildInFunc(stringScope, stringType, "parseInt", params);
+        addBuildInFunc(stringScope, intType, "parseInt", params);
         // int ord(int pos)
         params = new ArrayList<>();
         params.add(new VarEntity("pos", intType));
