@@ -48,7 +48,6 @@ public class ScopeBuilder extends ScopeScanner {
                 varNode.accept(this);
             }
         }
-
     }
 
     @Override
@@ -228,14 +227,15 @@ public class ScopeBuilder extends ScopeScanner {
         }
     }
 
-    // fixme maybe wrong
     @Override
     public void visit(BlockStmtNode node) {
+        Scope blockScope = new Scope(currentScope);
+        currentScope = blockScope;
         for (StmtNode stmtNode : node.getStmtNodeList()) {
             stmtNode.accept(this);
         }
+        currentScope = currentScope.getFather();
     }
-
 
     @Override
     public void visit(ExprListNode node) {
@@ -449,8 +449,8 @@ public class ScopeBuilder extends ScopeScanner {
                 break;
             case less:
             case greater:
-            case logicAnd:
-            case logicOr:
+            case leq:
+            case geq:
                 if (!(ltype.equals(rtype))) {
                     throw new CompileError(node.getLocation(), "binary not comparable");
                 }
@@ -460,8 +460,8 @@ public class ScopeBuilder extends ScopeScanner {
                 node.setLvalue(false);
                 node.setType(boolType);
                 break;
-            case leq:
-            case geq:
+            case equal:
+            case neq:
                 if (!(ltype.equals(rtype))) {
                     if ((rtype instanceof NullType) && !(ltype instanceof ArrayType || ltype instanceof ClassType)) {
                         throw new CompileError(node.getLocation(), "binary null error");
@@ -470,6 +470,14 @@ public class ScopeBuilder extends ScopeScanner {
                 node.setLvalue(false);
                 node.setType(boolType);
                 break;
+            case logicAnd:
+            case logicOr:
+                if (!ltype.equals(rtype)) {
+                    throw new CompileError(node.getLocation(), "binary not comparable");
+                }
+                if (!(ltype instanceof BoolType)) {
+                    throw new CompileError(node.getLocation(), "logic op not bool");
+                }
             case assign:
                 if (!(node.getLhs().isLvalue())) {
                     throw new CompileError(node.getLocation(), "assign can't be lvalue");

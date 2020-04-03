@@ -3,298 +3,60 @@
   <component name="ChangeListManager">
     <list default="true" id="4563f96d-41b6-4b81-a85d-963b9b35b194" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/FuncExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/FuncExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/frontend/semantic/ScopeBuilder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/frontend/semantic/ScopeBuilder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/FuncExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode$BinOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-6.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-7.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-8.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/array-package/array-9.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-10.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-11.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-12.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-13.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-14.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-15.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-16.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-17.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-18.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-19.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-20.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-21.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-22.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-23.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-24.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-25.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-26.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-27.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-28.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-29.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-30.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-31.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-32.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-33.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-34.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-35.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-36.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-37.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-38.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-39.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-40.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-41.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-42.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-43.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-44.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-45.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-46.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-47.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-48.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-49.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-50.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-51.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-52.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-53.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-54.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-55.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-56.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-57.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-58.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-59.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-6.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-60.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-61.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-62.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-63.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-64.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-65.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-66.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-67.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-68.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-69.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-7.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-70.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-71.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-8.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/basic-package/basic-9.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/bool-compare.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/breakcontinue-package/breakcontinue-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/breakcontinue-package/breakcontinue-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/breakcontinue-package/breakcontinue-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/breakcontinue-package/breakcontinue-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/breakcontinue-package/breakcontinue-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/builtin-func-package/builtin-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/builtin-func-package/builtin-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/builtin-func-package/builtin-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/builtin-func-package/builtin-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-10.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-11.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-12.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-13.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-14.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-15.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-6.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-7.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-8.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/class-package/class-9.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/1145A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/122A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/158A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/1A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/231A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/263A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/399A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/4A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/69A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/codeforces-package/71A.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/condition.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/expression-package/expression-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/expression-package/expression-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/expression-package/expression-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/expression-package/expression-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/expression-package/expression-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/function-package/function-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/function-package/function-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/function-package/function-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/function-package/function-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/function-package/function-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/function-package/function-6.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/if-package/if-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/if-package/if-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/if-package/if-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/judgelist.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/loop-package/loop-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/loop-package/loop-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/loop-package/loop-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-10.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-11.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-12.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-13.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-14.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-15.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-16.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-17.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-18.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-19.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-20.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-21.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-22.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-23.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-24.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-25.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-26.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-27.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-28.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-29.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-30.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-31.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-32.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-33.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-34.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-35.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-36.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-37.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-6.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-7.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-8.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/misc-package/misc-9.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/old_sema_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-6.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-7.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/scope-package/scope-8.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/string-package/string-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/symbol-package/symbol-1.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/symbol-package/symbol-2.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/symbol-package/symbol-3.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/symbol-package/symbol-4.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/symbol-package/symbol-5.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/symbol-package/symbol-6.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/symbol-package/symbol-7.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sema/test.mx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ast/BinaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/BinaryExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ast/FuncExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/FuncExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ast/NewExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/NewExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ast/PostfixExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/PostfixExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ast/PrefixExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/PrefixExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/BinaryExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode$PostOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PostfixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode$PreOp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/ast/PrefixExprNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/test/Compiler/production/Compiler/com/frontend/ASTBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/frontend/semantic/ScopeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/semantic/ScopeBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.mx" beforeDir="false" afterPath="$PROJECT_DIR$/test.mx" afterDir="false" />
@@ -432,7 +194,7 @@
       <workItem from="1585809212942" duration="258000" />
       <workItem from="1585832716197" duration="9063000" />
       <workItem from="1585877691802" duration="8142000" />
-      <workItem from="1585899198833" duration="544000" />
+      <workItem from="1585899198833" duration="1669000" />
     </task>
     <servers />
   </component>
@@ -482,53 +244,53 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="314" y="53" key="CommitChangelistDialog2/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585793928862" />
-    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1585899647141">
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1585901078468">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1585788782779" />
     <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082657" />
-    <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899647141" />
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901078468" />
     <state width="1398" height="282" key="GridCell.Tab.0.bottom/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585749991125" />
-    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1585899647140">
+    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1585901078467">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1585788782778" />
     <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082654" />
-    <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899647140" />
+    <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901078467" />
     <state width="1398" height="282" key="GridCell.Tab.0.center/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585749991124" />
-    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1585899647139">
+    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1585901078466">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1585788782777" />
     <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082653" />
-    <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899647139" />
+    <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901078466" />
     <state width="1398" height="282" key="GridCell.Tab.0.left/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585749991123" />
-    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1585899647140">
+    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1585901078467">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1585788782778" />
     <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082656" />
-    <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899647140" />
+    <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901078467" />
     <state width="1398" height="282" key="GridCell.Tab.0.right/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585749991124" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1585899179925">
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1585901039014">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899179925" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901039014" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585748997963" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1585899179924">
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1585901039013">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899179924" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901039013" />
     <state width="1398" height="303" key="GridCell.Tab.1.center/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585748997962" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1585899179923">
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1585901039012">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899179923" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901039012" />
     <state width="1398" height="303" key="GridCell.Tab.1.left/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585748997960" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1585899179924">
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1585901039014">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585899179924" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585901039014" />
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585748997962" />
     <state x="220" y="49" key="SettingsEditor" timestamp="1585796162500">
       <screen x="0" y="0" width="1440" height="900" />
@@ -581,5 +343,12 @@
         <breakpoint enabled="true" type="java-exception" />
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="node.getLocation().toString()" language="JAVA" />
+        <watch expression="node.getExpr().getType()" language="JAVA" />
+        <watch expression="node.getOp()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
