@@ -27,7 +27,10 @@ param: type Identifier;
 //
 
 //------------------------ type -----------------------------------------------
-type: nonArrayType (Bracket)*;
+type: type Bracket
+    | nonArrayType
+    ;
+
 
 Bracket: '[' ']';
 

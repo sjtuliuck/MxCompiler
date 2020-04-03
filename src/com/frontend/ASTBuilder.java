@@ -183,14 +183,11 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     @Override
     public Node visitType(MxStarParser.TypeContext ctx) {
         Location location = new Location(ctx);
-        // fixme dim
-        int dim = ctx.Bracket().size();
-        if (dim > 0) {
-            TypeNode typeNode = (TypeNode) visit(ctx.nonArrayType());
-            Type type = new ArrayType(typeNode.getType());
-            return new TypeNode(location, type);
-        } else {
+        if (ctx.nonArrayType() != null) {
             return visit(ctx.nonArrayType());
+        } else {
+            TypeNode arrayType = (TypeNode) visit(ctx.type());
+            return new TypeNode(location, new ArrayType(arrayType.getType()));
         }
     }
 
@@ -421,7 +418,12 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
     public Node visitArrayCreator(MxStarParser.ArrayCreatorContext ctx) {
         Location location = new Location(ctx);
         Type newType = ((TypeNode) visit(ctx.nonArrayType())).getType();
-        int dim = ctx.Bracket().size();
+        int dim = 0;
+        for (var child : ctx.children) {
+            if (child.getText().equals("[")) {
+                ++dim;
+            }
+        }
         List<ExprNode> exprNodeList = new ArrayList<>();
         for (var expr : ctx.expr()) {
             ExprNode exprNode = (ExprNode) visit(expr);

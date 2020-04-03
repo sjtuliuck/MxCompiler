@@ -283,10 +283,14 @@ public class ScopeBuilder extends ScopeScanner {
         if (classEntity == null) {
             throw new CompileError(node.getLocation(), "member expr no class entity");
         }
-        // fixme
-        VarEntity varEntity = classEntity.getClassScope().getLocalVar(node.getIdentifier());
-        if (varEntity == null) {
-            throw new CompileError(node.getLocation(), "no such member");
+        Entity entity = classEntity.getClassScope().getLocalVarFunc(node.getIdentifier());
+        if (entity instanceof VarEntity) {
+            node.setType(entity.getType());
+        } else if (entity instanceof FuncEntity) {
+            currentFuncCallEntity = (FuncEntity) entity;
+            node.setType(entity.getType());
+        } else {
+            throw new CompileError(node.getLocation(), "member not defined");
         }
         node.setLvalue(true);
     }
@@ -332,7 +336,7 @@ public class ScopeBuilder extends ScopeScanner {
                 if ((node.getParamList().get(i).getType() instanceof NullType) && !(paramType instanceof ArrayType || paramType instanceof ClassType)) {
                     throw new CompileError(node.getLocation(), "func param null type error");
                 }
-                if (!node.getParamList().get(i).getType().equals(paramType)) {
+                if (!node.getParamList().get(i).getType().getTypeName().equals(paramType.getTypeName())) {
                     throw new CompileError(node.getLocation(), "func param type not match");
                 }
             }

@@ -60,9 +60,9 @@ public class GlobalScanner extends ScopeScanner {
         addBuildInFunc(stringScope, intType, "length", params);
         // string substring(int left, int right)
         params = new ArrayList<>();
-        params.add(new VarEntity("this", stringEntity.getType()));
         params.add(new VarEntity("left", intType));
         params.add(new VarEntity("right", intType));
+        params.add(new VarEntity("this", stringEntity.getType()));
         addBuildInFunc(stringScope, intType, "substring", params);
         // int parseInt()
         params = new ArrayList<>();
@@ -70,8 +70,8 @@ public class GlobalScanner extends ScopeScanner {
         addBuildInFunc(stringScope, stringType, "parseInt", params);
         // int ord(int pos)
         params = new ArrayList<>();
-        params.add(new VarEntity("this", stringEntity.getType()));
         params.add(new VarEntity("pos", intType));
+        params.add(new VarEntity("this", stringEntity.getType()));
         addBuildInFunc(stringScope, intType, "ord", params);
     // global
         // void print(string str)
