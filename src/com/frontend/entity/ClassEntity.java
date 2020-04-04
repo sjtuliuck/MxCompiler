@@ -9,7 +9,7 @@ import com.frontend.type.Type;
 public class ClassEntity extends Entity {
     private Scope classScope;
 
-    public ClassEntity(String identifier, Type type, Scope father) {
+    public ClassEntity(Type type, String identifier, Scope father) {
         super(identifier, type);
         classScope = new Scope(father);
     }

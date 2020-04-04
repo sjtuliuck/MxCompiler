@@ -4,9 +4,7 @@ import com.ast.ProgramNode;
 import com.frontend.ASTBuilder;
 import com.frontend.ASTPrinter;
 import com.frontend.Scope;
-import com.frontend.semantic.ClassScanner;
-import com.frontend.semantic.GlobalScanner;
-import com.frontend.semantic.SemanticChecker;
+import com.frontend.SemanticChecker;
 import com.parser.*;
 import com.utility.ErrorHandler;
 import org.antlr.v4.runtime.*;
@@ -52,22 +50,18 @@ public class Main {
             ASTBuilder astBuilder = new ASTBuilder(null);
             ProgramNode astRoot = (ProgramNode) astBuilder.visit(parseTree);
             out.println("AST finished!");
-
+            //
             boolean printAST = false;
             if (printAST) {
                 ASTPrinter astPrinter = new ASTPrinter();
                 astPrinter.visit(astRoot);
-            } else {
-                Scope globalScope = new Scope(null);
-                GlobalScanner globalScanner = new GlobalScanner(globalScope);
-                globalScanner.visit(astRoot);
-                ClassScanner classScanner = new ClassScanner(globalScope);
-                classScanner.visit(astRoot);
-                SemanticChecker semanticChecker = new SemanticChecker(globalScope);
-                semanticChecker.visit(astRoot);
-                out.println("Semantic finished!");
+                return;
             }
-
+            //
+            Scope globalScope = new Scope(null);
+            SemanticChecker semanticChecker = new SemanticChecker(globalScope);
+            semanticChecker.visit(astRoot);
+            out.println("Semantic finished!");
         } catch (Exception exception) {
             err.println(exception);
             System.exit(1);
