@@ -12,14 +12,22 @@ import com.utility.Tools;
 
 import javax.tools.Tool;
 
-public class ScopeBuilder extends ScopeScanner {
+public class SemanticChecker implements ASTVisitor {
+    private Scope globalScope;
     private Scope currentScope;
     private FuncEntity currentFuncCallEntity;
     private Type currentRetType;
 
-    public ScopeBuilder(Scope globalScope) {
+    public Type boolType = new BoolType();
+    public Type intType = new IntType();
+    public Type stringType = new StringType();
+    public Type nullType = new NullType();
+    public Type voidType = new VoidType();
+
+    public SemanticChecker(Scope globalScope) {
         this.globalScope = globalScope;
         this.currentScope = globalScope;
+
     }
 
     private void checkVarInitExpr(VarNode varNode) {
@@ -59,7 +67,6 @@ public class ScopeBuilder extends ScopeScanner {
         }
     }
 
-    // fixme
     @Override
     public void visit(VarDefNode node) {
         if (node.getVarNodeList() != null) {
@@ -108,7 +115,6 @@ public class ScopeBuilder extends ScopeScanner {
         currentScope = currentScope.getFather();
     }
 
-    // fixme
     @Override
     public void visit(VarDefStmtNode node) {
         if (node.getVarNodeList() != null) {
@@ -225,7 +231,6 @@ public class ScopeBuilder extends ScopeScanner {
         }
     }
 
-    // fixme
     @Override
     public void visit(ReturnStmtNode node) {
         if (node.getRetExpr() != null) {
@@ -238,7 +243,7 @@ public class ScopeBuilder extends ScopeScanner {
                 if (!(currentRetType instanceof ArrayType || currentRetType instanceof ClassType)) {
                     throw new CompileError(node.getLocation(), "return null error");
                 }
-            } else if (!retType.getTypeName().equals(currentRetType.getTypeName())) { // fixme
+            } else if (!retType.getTypeName().equals(currentRetType.getTypeName())) {
                 throw new CompileError(node.getLocation(), "return not the same type");
             }
         } else if (!(currentRetType instanceof VoidType || currentRetType instanceof NullType || currentRetType == null)) {

@@ -53,7 +53,6 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
         }
     }
 
-    // fixme
     // varDef: type varList ';';
     @Override
     public Node visitVarDef(MxStarParser.VarDefContext ctx) {

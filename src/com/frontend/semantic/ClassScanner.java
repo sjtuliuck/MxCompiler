@@ -45,7 +45,6 @@ public class ClassScanner extends ScopeScanner {
 
     @Override
     public void visit(VarNode node) {
-        // fixme
         if (node.getType().getType() instanceof ClassType) {
             if (currentScope.getClass(((ClassType) (node.getType().getType())).getIdentifier()) == null) {
                 throw new CompileError(node.getLocation(), "class scanner varNode error");

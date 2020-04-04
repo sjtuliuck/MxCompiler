@@ -1,13 +1,12 @@
 package com;
 
-import com.ast.ASTVisitor;
 import com.ast.ProgramNode;
 import com.frontend.ASTBuilder;
 import com.frontend.ASTPrinter;
 import com.frontend.Scope;
 import com.frontend.semantic.ClassScanner;
 import com.frontend.semantic.GlobalScanner;
-import com.frontend.semantic.ScopeBuilder;
+import com.frontend.semantic.SemanticChecker;
 import com.parser.*;
 import com.utility.ErrorHandler;
 import org.antlr.v4.runtime.*;
@@ -64,8 +63,8 @@ public class Main {
                 globalScanner.visit(astRoot);
                 ClassScanner classScanner = new ClassScanner(globalScope);
                 classScanner.visit(astRoot);
-                ScopeBuilder scopeBuilder = new ScopeBuilder(globalScope);
-                scopeBuilder.visit(astRoot);
+                SemanticChecker semanticChecker = new SemanticChecker(globalScope);
+                semanticChecker.visit(astRoot);
                 out.println("Semantic finished!");
             }
 
