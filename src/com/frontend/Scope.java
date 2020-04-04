@@ -31,7 +31,13 @@ public class Scope {
     }
 
     public boolean isInLoop() {
-        return inLoop;
+        if (inLoop) {
+            return true;
+        } else if (father != null) {
+            return father.isInLoop();
+        } else {
+            return false;
+        }
     }
 
     public void setInLoop(boolean inLoop) {

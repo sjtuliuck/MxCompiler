@@ -1,42 +1,633 @@
-/Library/Java/JavaVirtualMachines/jdk-11.0.6.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57003:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/lck/Desktop/Compiler/out/production/Compiler:/Users/lck/Desktop/Compiler/lib/antlr-4.8-complete.jar com.Main
+/Library/Java/JavaVirtualMachines/jdk-11.0.6.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=61333:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/lck/Desktop/Compiler/out/production/Compiler:/Users/lck/Desktop/Compiler/lib/antlr-4.8-complete.jar com.Main
 ParseTree finished!
 AST finished!
 <ProgramNode>
+	<VarDefNode>
+		<VarNode>
+			Type:int
+			Identifier: countA
+	<VarDefNode>
+		<VarNode>
+			Type:int
+			Identifier: countB
+	<VarDefNode>
+		<VarNode>
+			Type:int
+			Identifier: countC
+	<VarDefNode>
+		<VarNode>
+			Type:class
+			Identifier: something
+	<ClassDefNode>
+		name:A
+		<VarNode>
+			Type:class
+			Identifier: a
+		<VarNode>
+			Type:class
+			Identifier: b
+		<VarNode>
+			Type:array
+			Identifier: c
+		<VarNode>
+			Type:int
+			Identifier: idx
+		<FuncDefNode>
+			name:getc0
+			<TypeNode>
+				Type: array
+			<BlockStmtNode>
+				<ReturnStmtNode>
+					<ArrayExprNode>
+						<IdentifierExprNode>
+							Identifier: c
+						<IntConstNode>
+							Int value:0
+		<FuncDefNode>
+			name:A
+			<TypeNode>
+				Type: null
+			<BlockStmtNode>
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<IdentifierExprNode>
+							Identifier: idx
+						<PostfixExprNode>
+							op:postInc
+							<IdentifierExprNode>
+								Identifier: countA
+				<IfStmtNode>
+					<BinaryExprNode>
+						op:equal
+						<BinaryExprNode>
+							op:mod
+							<IdentifierExprNode>
+								Identifier: idx
+							<IntConstNode>
+								Int value:2
+						<IntConstNode>
+							Int value:0
+					<BlockStmtNode>
+						<ExprStmtNode>
+							<BinaryExprNode>
+								op:assign
+								<IdentifierExprNode>
+									Identifier: a
+								<NewExprNode>
+									TypeName:class
+									Class: A
+									Dim: 0
+						<IfStmtNode>
+							<BinaryExprNode>
+								op:equal
+								<BinaryExprNode>
+									op:mod
+									<IdentifierExprNode>
+										Identifier: countB
+									<IntConstNode>
+										Int value:2
+								<IntConstNode>
+									Int value:0
+							<ExprStmtNode>
+								<BinaryExprNode>
+									op:assign
+									<IdentifierExprNode>
+										Identifier: b
+									<NewExprNode>
+										TypeName:class
+										Class: B
+										Dim: 0
+							<ExprStmtNode>
+								<BinaryExprNode>
+									op:assign
+									<IdentifierExprNode>
+										Identifier: b
+									<NullConstNode>
+					<ExprStmtNode>
+						<BinaryExprNode>
+							op:assign
+							<IdentifierExprNode>
+								Identifier: a
+							<NullConstNode>
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<IdentifierExprNode>
+							Identifier: c
+						<NewExprNode>
+							TypeName:array
+														<IntConstNode>
+								Int value:2
+							Dim: 2
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<ArrayExprNode>
+							<IdentifierExprNode>
+								Identifier: c
+							<IntConstNode>
+								Int value:0
+						<ArrayExprNode>
+							<ArrayExprNode>
+								<ArrayExprNode>
+									<NewExprNode>
+										TypeName:array
+																				<IntConstNode>
+											Int value:6
+										<IntConstNode>
+											Int value:6
+										<IntConstNode>
+											Int value:6
+										<IntConstNode>
+											Int value:6
+										Dim: 4
+									<IntConstNode>
+										Int value:2
+								<IntConstNode>
+									Int value:3
+							<IntConstNode>
+								Int value:3
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<ArrayExprNode>
+							<IdentifierExprNode>
+								Identifier: c
+							<IntConstNode>
+								Int value:1
+						<NullConstNode>
+				<IfStmtNode>
+					<BinaryExprNode>
+						op:neq
+						<FuncExprNode>
+							<MemberExprNode>
+								<IdentifierExprNode>
+									Identifier: c
+								Identifier:size
+						<IntConstNode>
+							Int value:2
+					<ExprStmtNode>
+						<FuncExprNode>
+							<IdentifierExprNode>
+								Identifier: println
+							<StringConstNode>
+								String value:"Oops!"
+	<ClassDefNode>
+		name:B
+		<VarNode>
+			Type:int
+			Identifier: idx
+		<VarNode>
+			Type:class
+			Identifier: c
+		<FuncDefNode>
+			name:B
+			<TypeNode>
+				Type: null
+			<BlockStmtNode>
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<IdentifierExprNode>
+							Identifier: idx
+						<PostfixExprNode>
+							op:postInc
+							<IdentifierExprNode>
+								Identifier: countB
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<IdentifierExprNode>
+							Identifier: c
+						<FuncExprNode>
+							<MemberExprNode>
+								<FuncExprNode>
+									<MemberExprNode>
+										<ArrayExprNode>
+											<FuncExprNode>
+												<MemberExprNode>
+													<NewExprNode>
+														TypeName:class
+														Class: A
+														Dim: 0
+													Identifier:getc0
+											<IntConstNode>
+												Int value:0
+										Identifier:Me
+								Identifier:Me
+	<ClassDefNode>
+		name:C
+		<VarNode>
+			Type:int
+			Identifier: idx
+		<VarNode>
+			Type:string
+			Identifier: str
+		<FuncDefNode>
+			name:Me
+			<TypeNode>
+				Type: class
+			<BlockStmtNode>
+				<ReturnStmtNode>
+					<ThisExprNode>
+		<FuncDefNode>
+			name:C
+			<TypeNode>
+				Type: null
+			<BlockStmtNode>
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<MemberExprNode>
+							<ThisExprNode>
+							Identifier:idx
+						<PostfixExprNode>
+							op:postInc
+							<IdentifierExprNode>
+								Identifier: countC
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<IdentifierExprNode>
+							Identifier: str
+						<FuncExprNode>
+							<IdentifierExprNode>
+								Identifier: toString
+							<IdentifierExprNode>
+								Identifier: idx
+				<ExprStmtNode>
+					<BinaryExprNode>
+						op:assign
+						<IdentifierExprNode>
+							Identifier: something
+						<FuncExprNode>
+							<IdentifierExprNode>
+								Identifier: Me
+	<FuncDefNode>
+		name:count
+		<TypeNode>
+			Type: void
+		<BlockStmtNode>
+			<ExprStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: countA
+					<IntConstNode>
+						Int value:0
+			<ExprStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: countB
+					<IntConstNode>
+						Int value:0
+			<ExprStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: countC
+					<IntConstNode>
+						Int value:0
+			<VarDefStmtNode>
+				<VarNode>
+					Type:class
+					Identifier: b
+					<NewExprNode>
+						TypeName:class
+						Class: B
+						Dim: 0
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierExprNode>
+						Identifier: println
+					<BinaryExprNode>
+						op:add
+						<BinaryExprNode>
+							op:add
+							<BinaryExprNode>
+								op:add
+								<BinaryExprNode>
+									op:add
+									<FuncExprNode>
+										<IdentifierExprNode>
+											Identifier: toString
+										<IdentifierExprNode>
+											Identifier: countA
+									<StringConstNode>
+										String value:" "
+								<FuncExprNode>
+									<IdentifierExprNode>
+										Identifier: toString
+									<IdentifierExprNode>
+										Identifier: countB
+							<StringConstNode>
+								String value:" "
+						<FuncExprNode>
+							<IdentifierExprNode>
+								Identifier: toString
+							<IdentifierExprNode>
+								Identifier: countC
+			<ExprStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: countA
+					<IntConstNode>
+						Int value:1
+			<ExprStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: countB
+					<IntConstNode>
+						Int value:1
+			<ExprStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: countC
+					<IntConstNode>
+						Int value:1
+			<ExprStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: b
+					<NewExprNode>
+						TypeName:class
+						Class: B
+						Dim: 0
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierExprNode>
+						Identifier: print
+					<BinaryExprNode>
+						op:add
+						<BinaryExprNode>
+							op:add
+							<BinaryExprNode>
+								op:add
+								<BinaryExprNode>
+									op:add
+									<FuncExprNode>
+										<IdentifierExprNode>
+											Identifier: toString
+										<BinaryExprNode>
+											op:sub
+											<IdentifierExprNode>
+												Identifier: countA
+											<IntConstNode>
+												Int value:1
+									<StringConstNode>
+										String value:" "
+								<FuncExprNode>
+									<IdentifierExprNode>
+										Identifier: toString
+									<BinaryExprNode>
+										op:sub
+										<IdentifierExprNode>
+											Identifier: countB
+										<IntConstNode>
+											Int value:1
+							<StringConstNode>
+								String value:" "
+						<FuncExprNode>
+							<IdentifierExprNode>
+								Identifier: toString
+							<BinaryExprNode>
+								op:sub
+								<IdentifierExprNode>
+									Identifier: countC
+								<IntConstNode>
+									Int value:1
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierExprNode>
+						Identifier: print
+					<StringConstNode>
+						String value:"\n"
+			<ExprStmtNode>
+				<FuncExprNode>
+					<IdentifierExprNode>
+						Identifier: println
+					<FuncExprNode>
+						<IdentifierExprNode>
+							Identifier: toString
+						<FuncExprNode>
+							<MemberExprNode>
+								<FuncExprNode>
+									<MemberExprNode>
+										<MemberExprNode>
+											<FuncExprNode>
+												<MemberExprNode>
+													<IdentifierExprNode>
+														Identifier: something
+													Identifier:Me
+											Identifier:str
+										Identifier:substring
+									<IntConstNode>
+										Int value:1
+									<BinaryExprNode>
+										op:sub
+										<FuncExprNode>
+											<MemberExprNode>
+												<MemberExprNode>
+													<IdentifierExprNode>
+														Identifier: something
+													Identifier:str
+												Identifier:length
+										<IntConstNode>
+											Int value:1
+								Identifier:parseInt
+			<VarDefStmtNode>
+				<VarNode>
+					Type:string
+					Identifier: temp
+					<FuncExprNode>
+						<IdentifierExprNode>
+							Identifier: toString
+						<FuncExprNode>
+							<MemberExprNode>
+								<MemberExprNode>
+									<IdentifierExprNode>
+										Identifier: something
+									Identifier:str
+								Identifier:ord
+							<BinaryExprNode>
+								op:bitwiseAnd
+								<IntConstNode>
+									Int value:42
+								<IntConstNode>
+									Int value:21
+			<IfStmtNode>
+				<BinaryExprNode>
+					op:less
+					<IdentifierExprNode>
+						Identifier: temp
+					<MemberExprNode>
+						<IdentifierExprNode>
+							Identifier: something
+						Identifier:str
+				<ExprStmtNode>
+					<FuncExprNode>
+						<IdentifierExprNode>
+							Identifier: println
+						<BinaryExprNode>
+							op:add
+							<BinaryExprNode>
+								op:add
+								<MemberExprNode>
+									<IdentifierExprNode>
+										Identifier: something
+									Identifier:str
+								<StringConstNode>
+									String value:">"
+							<IdentifierExprNode>
+								Identifier: temp
+				<ExprStmtNode>
+					<FuncExprNode>
+						<IdentifierExprNode>
+							Identifier: println
+						<BinaryExprNode>
+							op:add
+							<BinaryExprNode>
+								op:add
+								<MemberExprNode>
+									<IdentifierExprNode>
+										Identifier: something
+									Identifier:str
+								<StringConstNode>
+									String value:"<="
+							<IdentifierExprNode>
+								Identifier: temp
 	<FuncDefNode>
 		name:main
 		<TypeNode>
 			Type: int
 		<BlockStmtNode>
+			<BlockStmtNode>
+				<BlockStmtNode>
+					<BlockStmtNode>
+					<BlockStmtNode>
 			<VarDefStmtNode>
 				<VarNode>
 					Type:int
-					Identifier: a
+					Identifier: i
+			<ForStmtNode>
+				<BinaryExprNode>
+					op:assign
+					<IdentifierExprNode>
+						Identifier: i
+					<IntConstNode>
+						Int value:0
+				<PostfixExprNode>
+					op:postInc
+					<IdentifierExprNode>
+						Identifier: i
+				<IfStmtNode>
+					<BinaryExprNode>
+						op:equal
+						<BinaryExprNode>
+							op:equal
+							<BinaryExprNode>
+								op:bitwiseXor
+								<IdentifierExprNode>
+									Identifier: i
+								<BinaryExprNode>
+									op:bitwiseAnd
+									<IntConstNode>
+										Int value:891
+									<IntConstNode>
+										Int value:759
+							<IntConstNode>
+								Int value:666
+						<PrefixExprNode>
+							op:logicNot
+							<BoolConstNode>
+								Bool value:false
+					<BlockStmtNode>
+						<ExprStmtNode>
+							<FuncExprNode>
+								<IdentifierExprNode>
+									Identifier: println
+								<FuncExprNode>
+									<IdentifierExprNode>
+										Identifier: toString
+									<IdentifierExprNode>
+										Identifier: i
+						<VarDefStmtNode>
+							<VarNode>
+								Type:int
+								Identifier: i
+								<IntConstNode>
+									Int value:0
+						<ExprStmtNode>
+							<FuncExprNode>
+								<IdentifierExprNode>
+									Identifier: println
+								<FuncExprNode>
+									<IdentifierExprNode>
+										Identifier: toString
+									<IdentifierExprNode>
+										Identifier: i
+						<BlockStmtNode>
+							<VarDefStmtNode>
+								<VarNode>
+									Type:int
+									Identifier: i
+									<IntConstNode>
+										Int value:1
+							<ExprStmtNode>
+								<FuncExprNode>
+									<IdentifierExprNode>
+										Identifier: println
+									<FuncExprNode>
+										<IdentifierExprNode>
+											Identifier: toString
+										<IdentifierExprNode>
+											Identifier: i
+						<ExprStmtNode>
+							<FuncExprNode>
+								<IdentifierExprNode>
+									Identifier: count
+						<BreakStmtNode>
+			<WhileStmtNode>
+				<BoolConstNode>
+					Bool value:true
+				<BlockStmtNode>
+					<IfStmtNode>
+						<BinaryExprNode>
+							op:equal
+							<BinaryExprNode>
+								op:mod
+								<IdentifierExprNode>
+									Identifier: i
+								<IntConstNode>
+									Int value:2
+							<IntConstNode>
+								Int value:0
+						<ContinueStmtNode>
+					<ExprStmtNode>
+						<FuncExprNode>
+							<IdentifierExprNode>
+								Identifier: print
+							<BinaryExprNode>
+								op:add
+								<FuncExprNode>
+									<IdentifierExprNode>
+										Identifier: toString
+									<IdentifierExprNode>
+										Identifier: i
+								<StringConstNode>
+									String value:","
 			<ExprStmtNode>
-				<PrefixExprNode>
-					op:preInc
-					<PostfixExprNode>
-						op:postInc
-						<PostfixExprNode>
-							op:postInc
-							<PrefixExprNode>
-								op:preInc
-								<PostfixExprNode>
-									op:postInc
-									<PostfixExprNode>
-										op:postInc
-										<PrefixExprNode>
-											op:preInc
-											<PrefixExprNode>
-												op:preInc
-												<IdentifierExprNode>
-													Identifier: a
-			<ExprStmtNode>
-				<PrefixExprNode>
-					op:preInc
-					<PostfixExprNode>
-						op:postInc
-						<IdentifierExprNode>
-							Identifier: a
+				<FuncExprNode>
+					<IdentifierExprNode>
+						Identifier: println
+					<StringConstNode>
+						String value:""
 			<ReturnStmtNode>
 				<IntConstNode>
 					Int value:0

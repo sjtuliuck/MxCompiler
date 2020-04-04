@@ -8,6 +8,9 @@ import com.frontend.entity.FuncEntity;
 import com.frontend.entity.VarEntity;
 import com.frontend.type.*;
 import com.utility.CompileError;
+import com.utility.Tools;
+
+import javax.tools.Tool;
 
 public class ScopeBuilder extends ScopeScanner {
     private Scope currentScope;
@@ -26,6 +29,17 @@ public class ScopeBuilder extends ScopeScanner {
         varNode.getInitExpr().accept(this);
         if (varNode.getType().getType() instanceof VoidType || varNode.getInitExpr().getType() instanceof VoidType) {
             throw new CompileError(varNode.getLocation(), "var init void error");
+        }
+        if (varNode.getType().getType() instanceof ArrayType && varNode.getInitExpr().getType() instanceof ArrayType) {
+            Type lType = ((ArrayType) varNode.getType().getType()).getArrayType();
+            Type rType = ((ArrayType) varNode.getInitExpr().getType()).getArrayType();
+            while (lType instanceof ArrayType && rType instanceof ArrayType) {
+                lType = ((ArrayType) lType).getArrayType();
+                rType = ((ArrayType) rType).getArrayType();
+            }
+            if (!lType.getTypeName().equals(rType.getTypeName())) {
+                throw new CompileError("var init array error");
+            }
         }
         if ((varNode.getType().getType().getTypeName().equals(varNode.getInitExpr().getType().getTypeName()))) {
             return;
@@ -117,19 +131,27 @@ public class ScopeBuilder extends ScopeScanner {
             throw new CompileError(node.getLocation(), "if cond not bool");
         }
         // then
-        if (!(node.getThenStmt() instanceof BlockStmtNode)) {
-            node.getThenStmt().accept(this);
-        } else {
-            Scope blockScope = new Scope(currentScope);
-            ((BlockStmtNode) node.getThenStmt()).setScope(blockScope);
-            currentScope = blockScope;
-            node.getThenStmt().accept(this);
-            currentScope = currentScope.getFather();
+        if (node.getThenStmt() != null) {
+            if (!(node.getThenStmt() instanceof BlockStmtNode)) {
+                Scope ifScope = new Scope(currentScope);
+                currentScope = ifScope;
+                node.getThenStmt().accept(this);
+                currentScope = currentScope.getFather();
+            } else {
+                Scope blockScope = new Scope(currentScope);
+                ((BlockStmtNode) node.getThenStmt()).setScope(blockScope);
+                currentScope = blockScope;
+                node.getThenStmt().accept(this);
+                currentScope = currentScope.getFather();
+            }
         }
         // else
         if (node.getElseStmt() != null) {
             if (!(node.getElseStmt() instanceof  BlockStmtNode)) {
+                Scope ifScope = new Scope(currentScope);
+                currentScope = ifScope;
                 node.getElseStmt().accept(this);
+                currentScope = currentScope.getFather();
             } else {
                 Scope blockScope = new Scope(currentScope);
                 ((BlockStmtNode) node.getThenStmt()).setScope(blockScope);
@@ -151,7 +173,11 @@ public class ScopeBuilder extends ScopeScanner {
         // body
         if (node.getBodyStmt() != null) {
             if (!(node.getBodyStmt() instanceof BlockStmtNode)) {
+                Scope loopScope = new Scope(currentScope);
+                loopScope.setInLoop(true);
+                currentScope = loopScope;
                 node.getBodyStmt().accept(this);
+                currentScope = currentScope.getFather();
             } else {
                 Scope blockScope = new Scope(currentScope);
                 blockScope.setInLoop(true);
@@ -160,8 +186,6 @@ public class ScopeBuilder extends ScopeScanner {
                 node.getBodyStmt().accept(this);
                 currentScope = currentScope.getFather();
             }
-        } else {
-            throw new CompileError(node.getLocation(), "while no body");
         }
     }
 
@@ -185,7 +209,11 @@ public class ScopeBuilder extends ScopeScanner {
         // body
         if (node.getBodyStmt() != null) {
             if (!(node.getBodyStmt() instanceof BlockStmtNode)) {
+                Scope loopScope = new Scope(currentScope);
+                loopScope.setInLoop(true);
+                currentScope = loopScope;
                 node.getBodyStmt().accept(this);
+                currentScope = currentScope.getFather();
             } else {
                 Scope blockScope = new Scope(currentScope);
                 blockScope.setInLoop(true);
@@ -206,12 +234,14 @@ public class ScopeBuilder extends ScopeScanner {
             if (retType instanceof VoidType || retType == null) {
                 throw new CompileError(node.getLocation(), "return void error");
             }
-            if (retType instanceof NullType && !(currentRetType instanceof ArrayType || currentRetType instanceof ClassType)) {
-                throw new CompileError(node.getLocation(), "return null error");
+            if (retType instanceof NullType) {
+                if (!(currentRetType instanceof ArrayType || currentRetType instanceof ClassType)) {
+                    throw new CompileError(node.getLocation(), "return null error");
+                }
             } else if (!retType.getTypeName().equals(currentRetType.getTypeName())) { // fixme
                 throw new CompileError(node.getLocation(), "return not the same type");
             }
-        } else if (!(currentRetType instanceof VoidType || currentRetType == null)) {
+        } else if (!(currentRetType instanceof VoidType || currentRetType instanceof NullType || currentRetType == null)) {
             throw new CompileError(node.getLocation(), "return void error");
         }
     }
@@ -221,6 +251,7 @@ public class ScopeBuilder extends ScopeScanner {
         if (!currentScope.isInLoop()) {
             throw new CompileError(node.getLocation(), "break not in loop");
         }
+//        currentScope = currentScope.getFather();
     }
 
     @Override
@@ -233,9 +264,6 @@ public class ScopeBuilder extends ScopeScanner {
     @Override
     public void visit(BlockStmtNode node) {
         Scope blockScope = new Scope(currentScope);
-        if (currentScope.isInLoop()) {
-            blockScope.setInLoop(true);
-        }
         currentScope = blockScope;
         for (StmtNode stmtNode : node.getStmtNodeList()) {
             stmtNode.accept(this);
@@ -339,12 +367,14 @@ public class ScopeBuilder extends ScopeScanner {
                 if (node.getParamList().get(i).getType() instanceof VoidType) {
                     throw new CompileError(node.getLocation(), "func param void type");
                 }
-                if ((node.getParamList().get(i).getType() instanceof NullType) && !(paramType instanceof ArrayType || paramType instanceof ClassType)) {
-                    throw new CompileError(node.getLocation(), "func param null type error");
-                }
-                if (!node.getParamList().get(i).getType().getTypeName().equals(paramType.getTypeName())) {
+                if ((node.getParamList().get(i).getType() instanceof NullType)) {
+                    if (!(paramType instanceof ArrayType || paramType instanceof ClassType)) {
+                        throw new CompileError(node.getLocation(), "func param null type error");
+                    }
+                } else if (!node.getParamList().get(i).getType().getTypeName().equals(paramType.getTypeName())) {
                     throw new CompileError(node.getLocation(), "func param type not match");
                 }
+
             }
         }
         node.setLvalue(false);

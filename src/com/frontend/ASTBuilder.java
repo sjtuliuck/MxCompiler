@@ -81,6 +81,9 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
         List<FuncDefNode> funcDefNodeList = new ArrayList<>();
         for (var funcDef : ctx.funcDef()) {
             FuncDefNode funcDefNode = (FuncDefNode) visit(funcDef);
+            if (funcDefNode.getIdentifier().equals(identifier)) {
+                throw new CompileError(new Location(funcDef), "constructor with ret type");
+            }
             funcDefNodeList.add(funcDefNode);
         }
         // constructor

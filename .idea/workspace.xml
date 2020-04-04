@@ -3,102 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4563f96d-41b6-4b81-a85d-963b9b35b194" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ArrayCreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ArrayCreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ArrayExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ArrayExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BinaryExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BinaryExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BlockContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BlockStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BlockStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BreakStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$BreakStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ClassDefContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ClassDefContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ConstExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ConstExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ConstantContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ConstantContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ConstructorDefContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ConstructorDefContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ContinueStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ContinueStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$CreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$CreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$EmptyStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$EmptyStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ErrorCreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ErrorCreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ExprListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ExprListContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ExprStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ExprStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ForStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ForStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$FuncDefContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$FuncDefContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$FuncExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$FuncExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$IdentifierExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$IdentifierExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$IfStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$IfStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$MemberExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$MemberExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$NewExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$NewExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$NonArrayCreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$NonArrayCreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$NonArrayTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$NonArrayTypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ParamContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ParamContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ParenExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ParenExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$PostfixExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$PostfixExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$PrefixExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$PrefixExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ReturnStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ReturnStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$StmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$StmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ThisExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$ThisExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$TypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$TypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$VarContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$VarContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$VarDefStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$VarDefStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser$WhileStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser$WhileStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/parser/MxStarParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/parser/MxStarParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/frontend/semantic/ScopeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/frontend/semantic/ScopeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStar.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStar.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ArrayCreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ArrayCreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ArrayExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ArrayExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BinaryExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BinaryExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BlockContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BlockStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BlockStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BreakStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$BreakStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ClassDefContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ClassDefContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ConstExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ConstExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ConstantContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ConstantContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ConstructorDefContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ConstructorDefContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ContinueStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ContinueStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$CreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$CreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$EmptyStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$EmptyStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ErrorCreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ErrorCreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ExprListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ExprListContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ExprStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ExprStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ForStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ForStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$FuncDefContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$FuncDefContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$FuncExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$FuncExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$IdentifierExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$IdentifierExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$IfStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$IfStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$MemberExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$MemberExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$NewExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$NewExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$NonArrayCreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$NonArrayCreatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$NonArrayTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$NonArrayTypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ParamContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ParamContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ParenExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ParenExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$PostfixExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$PostfixExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$PrefixExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$PrefixExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ReturnStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ReturnStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$StmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$StmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ThisExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$ThisExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$TypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$TypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$VarContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$VarContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$VarDefStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$VarDefStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$WhileStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser$WhileStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/com/parser/MxStarParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AST.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/Scope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/Scope.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/frontend/semantic/ScopeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/semantic/ScopeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStar.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStar.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utility/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utility/Tools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.mx" beforeDir="false" afterPath="$PROJECT_DIR$/test.mx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +146,8 @@
       <workItem from="1585877691802" duration="8142000" />
       <workItem from="1585899198833" duration="4952000" />
       <workItem from="1585914381188" duration="11325000" />
-      <workItem from="1585926195523" duration="1292000" />
+      <workItem from="1585926195523" duration="1373000" />
+      <workItem from="1585966797710" duration="3840000" />
     </task>
     <servers />
   </component>
@@ -286,60 +197,60 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="314" y="53" key="CommitChangelistDialog2/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585793928862" />
-    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1585927504101">
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1585970706399">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1585788782779" />
     <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082657" />
-    <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585927504101" />
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970706399" />
     <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585907981255" />
     <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876566" />
-    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1585927504099">
+    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1585970706398">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1585788782778" />
     <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082654" />
-    <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585927504099" />
+    <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970706398" />
     <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1585907981254" />
     <state width="1398" height="303" key="GridCell.Tab.0.center/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876565" />
-    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1585927504098">
+    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1585970706397">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1585788782777" />
     <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082653" />
-    <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585927504098" />
+    <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970706397" />
     <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1585907981253" />
     <state width="1398" height="303" key="GridCell.Tab.0.left/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876564" />
-    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1585927504100">
+    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1585970706398">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1585788782778" />
     <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585880082656" />
-    <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585927504100" />
+    <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970706398" />
     <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585907981254" />
     <state width="1398" height="303" key="GridCell.Tab.0.right/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876565" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1585926089081">
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1585970658641">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585926089081" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970658641" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585907981247" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876568" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1585926089080">
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1585970658640">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585926089080" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970658640" />
     <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1585907981246" />
     <state width="1398" height="303" key="GridCell.Tab.1.center/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876567" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1585926089079">
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1585970658640">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585926089079" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970658640" />
     <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1585907981245" />
     <state width="1398" height="303" key="GridCell.Tab.1.left/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876566" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1585926089080">
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1585970658641">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585926089080" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585970658641" />
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1585907981246" />
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585922876567" />
     <state x="220" y="49" key="SettingsEditor" timestamp="1585796162500">
@@ -379,12 +290,12 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="393" y="278" width="707" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.800@0.0.1280.800" timestamp="1581990053889" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1585922147783">
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1585967027579">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="305" y="124" width="672" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1585234282886" />
     <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585795476079" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585922147783" />
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585967027579" />
     <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1585835615191" />
   </component>
   <component name="XDebuggerManager">
@@ -395,8 +306,11 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="varNode.getType().getType()" language="JAVA" />
-        <watch expression="varNode.getInitExpr().getType()" language="JAVA" />
+        <watch expression="paramType" language="JAVA" />
+        <watch expression="node.getParamList().get(i).getType()" language="JAVA" />
+        <watch expression="hasIdentifier(entity.getIdentifier())" language="JAVA" />
+        <watch expression="node.getLocation()" language="JAVA" />
+        <watch expression="currentScope" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

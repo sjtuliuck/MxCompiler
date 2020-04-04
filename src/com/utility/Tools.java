@@ -6,4 +6,12 @@ public class Tools {
             System.out.print('\t');
         }
     }
+
+    public static void haha() {
+        puts("---haha---");
+    }
+
+    public static void puts(String s) {
+        System.out.println(s);
+    }
 }
