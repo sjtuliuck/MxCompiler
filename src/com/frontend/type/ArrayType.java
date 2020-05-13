@@ -1,8 +1,5 @@
 package com.frontend.type;
 
-import java.util.ArrayList;
-import java.util.Objects;
-
 public class ArrayType extends Type {
     private Type arrayType;
 

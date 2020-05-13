@@ -8,6 +8,7 @@ import com.frontend.type.Type;
 
 public class ClassEntity extends Entity {
     private Scope classScope;
+    private int memSize = 0;
 
     public ClassEntity(Type type, String identifier, Scope father) {
         super(identifier, type);
@@ -29,5 +30,13 @@ public class ClassEntity extends Entity {
 
     public void setClassScope(Scope classScope) {
         this.classScope = classScope;
+    }
+
+    public int getMemSize() {
+        return memSize;
+    }
+
+    public void setMemSize(int memSize) {
+        this.memSize = memSize;
     }
 }

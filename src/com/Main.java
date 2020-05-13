@@ -1,10 +1,8 @@
 package com;
 
 import com.ast.ProgramNode;
-import com.frontend.ASTBuilder;
-import com.frontend.ASTPrinter;
-import com.frontend.Scope;
-import com.frontend.SemanticChecker;
+import com.frontend.*;
+import com.ir.IRRoot;
 import com.parser.*;
 import com.utility.ErrorHandler;
 import org.antlr.v4.runtime.*;
@@ -62,6 +60,14 @@ public class Main {
             SemanticChecker semanticChecker = new SemanticChecker(globalScope);
             semanticChecker.visit(astRoot);
             out.println("Semantic finished!");
+
+            //
+            IRBuilder irBuilder = new IRBuilder(globalScope);
+            irBuilder.visit(astRoot);
+            IRRoot irRoot = irBuilder.getIrRoot();
+            IRPrinter irPrinter = new IRPrinter(new PrintStream("test.ir"));
+            irPrinter.visit(irRoot);
+            out.println("IR finished");
         } catch (Exception exception) {
             err.println(exception);
             System.exit(1);

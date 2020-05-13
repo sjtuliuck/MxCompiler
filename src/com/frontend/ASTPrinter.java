@@ -4,9 +4,6 @@ import com.ast.*;
 import com.frontend.type.ClassType;
 import com.utility.Tools;
 
-import javax.tools.Tool;
-import java.io.PrintStream;
-
 public class ASTPrinter implements ASTVisitor {
     int tab;
     public ASTPrinter() {

@@ -2,6 +2,8 @@ package com.frontend.entity;
 
 import com.ast.VarNode;
 import com.frontend.type.Type;
+import com.ir.value.Register;
+import com.ir.value.VReg;
 import com.utility.Location;
 
 public class VarEntity extends Entity {
@@ -9,6 +11,10 @@ public class VarEntity extends Entity {
     private boolean inGlobal = false;
     private boolean inClass = false;
     private String classIdentifier = null;
+
+    private boolean unUsed = false;
+    private Register irReg = null;
+    private int memOffset = 0;
 
     //
     public VarEntity(String identifier, Type type) {
@@ -63,5 +69,29 @@ public class VarEntity extends Entity {
 
     public void setClassIdentifier(String classIdentifier) {
         this.classIdentifier = classIdentifier;
+    }
+
+    public Register getIrReg() {
+        return irReg;
+    }
+
+    public void setIrReg(Register irReg) {
+        this.irReg = irReg;
+    }
+
+    public int getMemOffset() {
+        return memOffset;
+    }
+
+    public void setMemOffset(int memOffset) {
+        this.memOffset = memOffset;
+    }
+
+    public boolean isUnUsed() {
+        return unUsed;
+    }
+
+    public void setUnUsed(boolean unUsed) {
+        this.unUsed = unUsed;
     }
 }

@@ -3,6 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="4563f96d-41b6-4b81-a85d-963b9b35b194" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ast/ExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/ExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ast/IdentifierExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/IdentifierExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/ASTPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/ASTPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/SemanticChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/SemanticChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/entity/ClassEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/entity/ClassEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/entity/FuncEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/entity/FuncEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/entity/VarEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/entity/VarEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/type/ArrayType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/type/ArrayType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/type/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/type/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utility/CompileError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utility/CompileError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utility/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utility/Tools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +41,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -59,7 +75,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -71,7 +87,7 @@
       <module name="Compiler" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,6 +166,20 @@
       <workItem from="1586522998689" duration="1658000" />
       <workItem from="1587039471632" duration="1321000" />
       <workItem from="1587198877608" duration="669000" />
+      <workItem from="1587373746879" duration="98000" />
+      <workItem from="1587904337096" duration="2687000" />
+      <workItem from="1588336742147" duration="6407000" />
+      <workItem from="1588386427655" duration="3600000" />
+      <workItem from="1588406487669" duration="14849000" />
+      <workItem from="1588470066453" duration="7143000" />
+      <workItem from="1588491085201" duration="1208000" />
+      <workItem from="1588517947502" duration="969000" />
+      <workItem from="1588564425679" duration="491000" />
+      <workItem from="1588575748540" duration="7373000" />
+      <workItem from="1588640710114" duration="20094000" />
+      <workItem from="1589202330151" duration="300000" />
+      <workItem from="1589336490867" duration="367000" />
+      <workItem from="1589353984946" duration="2341000" />
     </task>
     <servers />
   </component>
@@ -157,6 +187,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Auto_Import" timestamp="1588406776891">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Auto_Import/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588406776891" />
+    <state x="320" y="115" key="#Inspections" timestamp="1588427645357">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Inspections/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588427645357" />
     <state x="320" y="115" key="#Intentions" timestamp="1585982756177">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -165,10 +203,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="240" y="65" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1583760415425" />
-    <state x="240" y="65" key="#Project_Structure" timestamp="1581753937782">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="270" y="73" key="#Project_Structure" timestamp="1589354055258">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="240" y="65" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1581753937782" />
+    <state x="270" y="73" key="#Project_Structure/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1589354055258" />
     <state x="104" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584886793447">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -178,12 +217,12 @@
     </state>
     <state x="374" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1581945604204" />
     <state x="421" y="236" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585727452604" />
-    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1585917302580">
+    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1588664065224">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="776" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1584865653387" />
-    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585917302580" />
-    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1585835683750" />
+    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588664065224" />
+    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1588564712280" />
     <state x="873" y="150" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585383958247" />
     <state x="0" y="0" width="1440" height="900" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1585795506622">
       <screen x="0" y="0" width="1440" height="900" />
@@ -193,14 +232,18 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="237" y="292" width="451" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.800@0.0.1280.800" timestamp="1585234721898" />
+    <state x="527" y="313" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1588648511560">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="527" y="313" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588648511560" />
     <state x="439" y="175" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1585981229416">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="439" y="175" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585981229416" />
-    <state x="0" y="0" width="520" height="900" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585981093389">
+    <state x="0" y="0" width="520" height="900" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588421939493">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="0" y="0" width="520" height="900" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585981093389" />
+    <state x="0" y="0" width="520" height="900" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588421939493" />
     <state x="789" y="173" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585725602763">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -304,13 +347,17 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="393" y="278" width="707" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.800@0.0.1280.800" timestamp="1581990053889" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1586010055359">
+    <state x="384" y="209" key="run.anything.popup" timestamp="1588346876620">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="384" y="209" key="run.anything.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588346876619" />
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1588643306845">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="305" y="124" width="672" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1585234282886" />
     <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585795476079" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1586010055359" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1585835615191" />
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588643306845" />
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1588564875288" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

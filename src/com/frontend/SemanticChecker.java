@@ -20,11 +20,11 @@ public class SemanticChecker implements ASTVisitor {
     private Type curRetType;
     //
     private ClassType classType;
-    public Type boolType = new BoolType();
-    public Type intType = new IntType();
-    public Type stringType = new StringType();
-    public Type nullType = new NullType();
-    public Type voidType = new VoidType();
+    private Type boolType = new BoolType();
+    private Type intType = new IntType();
+    private Type stringType = new StringType();
+    private Type nullType = new NullType();
+    private Type voidType = new VoidType();
 
     public SemanticChecker(Scope globalScope) {
         round = 1;

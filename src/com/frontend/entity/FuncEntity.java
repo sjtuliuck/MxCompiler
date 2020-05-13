@@ -1,7 +1,6 @@
 package com.frontend.entity;
 
 import com.ast.FuncDefNode;
-import com.ast.VarDefNode;
 import com.ast.VarNode;
 import com.frontend.Scope;
 import com.frontend.type.FuncType;
