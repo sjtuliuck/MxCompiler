@@ -115,7 +115,7 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
             VarListNode varListNode = (VarListNode) visit(ctx.paramList());
             paramList = varListNode.getVarNodeList();
         }
-        StmtNode stmt = (StmtNode) visit(ctx.block());
+        BlockStmtNode stmt = (BlockStmtNode) visit(ctx.block());
         return new FuncDefNode(location, retType, identifier, paramList, stmt);
     }
 
@@ -132,7 +132,7 @@ public class ASTBuilder extends MxStarBaseVisitor<Node> {
             VarListNode varListNode = (VarListNode) visit(ctx.paramList());
             paramList = varListNode.getVarNodeList();
         }
-        StmtNode stmt = (StmtNode) visit(ctx.block());
+        BlockStmtNode stmt = (BlockStmtNode) visit(ctx.block());
         return new FuncDefNode(location, retType, identifier, paramList, stmt);
     }
 

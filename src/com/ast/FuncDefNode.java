@@ -10,9 +10,9 @@ public class FuncDefNode extends DefNode {
     private TypeNode retType;
     private String identifier;
     private List<VarNode> paramList;
-    private StmtNode stmt;
+    private BlockStmtNode stmt;
 
-    public FuncDefNode(Location location, TypeNode retType, String identifier, List<VarNode> paramList, StmtNode stmt) {
+    public FuncDefNode(Location location, TypeNode retType, String identifier, List<VarNode> paramList, BlockStmtNode stmt) {
         super(location);
         this.retType = retType;
         this.identifier = identifier;
@@ -32,7 +32,7 @@ public class FuncDefNode extends DefNode {
         return paramList;
     }
 
-    public StmtNode getStmt() {
+    public BlockStmtNode getStmt() {
         return stmt;
     }
 

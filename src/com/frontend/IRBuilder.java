@@ -130,15 +130,17 @@ public class IRBuilder implements ASTVisitor {
 
         Scope oldScope = curScope;
         BlockStmtNode blockStmtNode = (BlockStmtNode) node.getStmt();
-        curScope = blockStmtNode.getScope();
+        curScope = blockStmtNode.getScope();    //fixme
         if (curClass != null) {
             VReg vReg = new VReg("this");
             curScope.getVar("this").setIrReg(vReg);
             curFunc.addParamReg(vReg);
         }
         isFuncArg = true;
-        for (VarNode varNode : node.getParamList()) {
-            varNode.accept(this);
+        if (node.getParamList() != null) {
+            for (VarNode varNode : node.getParamList()) {
+                varNode.accept(this);
+            }
         }
         isFuncArg = false;
         curScope = oldScope;
