@@ -31,6 +31,18 @@ public class BinaryExprNode extends ExprNode {
         return op;
     }
 
+    public void setOp(BinOp op) {
+        this.op = op;
+    }
+
+    public void setLhs(ExprNode lhs) {
+        this.lhs = lhs;
+    }
+
+    public void setRhs(ExprNode rhs) {
+        this.rhs = rhs;
+    }
+
     public ExprNode getLhs() {
         return lhs;
     }

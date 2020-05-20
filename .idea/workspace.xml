@@ -3,21 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4563f96d-41b6-4b81-a85d-963b9b35b194" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ast/ExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/ExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ast/IdentifierExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/IdentifierExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/ASTPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/ASTPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/SemanticChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/SemanticChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/entity/ClassEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/entity/ClassEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/entity/FuncEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/entity/FuncEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/entity/VarEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/entity/VarEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/type/ArrayType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/type/ArrayType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frontend/type/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/type/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/parser/MxStarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parser/MxStarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/utility/CompileError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utility/CompileError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/utility/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utility/Tools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ast/BinaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ast/BinaryExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/frontend/IRBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frontend/IRBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ir/IRRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ir/IRRoot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/src/com/frontend/ASTBuilder.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/com/Main.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/com/frontend/Scope.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/com/frontend/IRBuilder.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/com/frontend/SemanticChecker.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/com/ast/Node.java" root0="SKIP_INSPECTION" />
   </component>
@@ -180,6 +169,10 @@
       <workItem from="1589202330151" duration="300000" />
       <workItem from="1589336490867" duration="367000" />
       <workItem from="1589353984946" duration="2341000" />
+      <workItem from="1589369770347" duration="1300000" />
+      <workItem from="1589810201447" duration="307000" />
+      <workItem from="1589942508060" duration="7950000" />
+      <workItem from="1589964606865" duration="822000" />
     </task>
     <servers />
   </component>
@@ -217,11 +210,11 @@
     </state>
     <state x="374" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1581945604204" />
     <state x="421" y="236" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1585727452604" />
-    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1588664065224">
+    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1589964661087">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="776" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1584865653387" />
-    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588664065224" />
+    <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1589964661087" />
     <state x="873" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1588564712280" />
     <state x="873" y="150" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-123.-1057.1920.1057@0.23.1440.877" timestamp="1585383958247" />
     <state x="0" y="0" width="1440" height="900" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1585795506622">
@@ -351,12 +344,12 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="384" y="209" key="run.anything.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588346876619" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1588643306845">
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup" timestamp="1589956449908">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="305" y="124" width="672" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1585234282886" />
     <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1057.1920.1057@0.0.1440.900" timestamp="1585795476079" />
-    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1588643306845" />
+    <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900/-123.-1080.1920.1080@0.0.1440.900" timestamp="1589956449908" />
     <state x="343" y="140" width="756" height="761" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1588564875288" />
   </component>
   <component name="XDebuggerManager">

@@ -527,10 +527,10 @@ public class IRBuilder implements ASTVisitor {
     public void visit(PostfixExprNode node) {
         switch (node.getOp()) {
             case postInc:
-                processSelfIncDec(node, "++");
+                processSelfIncDec(node, BinaryOperation.BinaryOp.Add);
                 break;
             case postDec:
-                processSelfIncDec(node, "--");
+                processSelfIncDec(node, BinaryOperation.BinaryOp.Sub);
                 break;
         }
     }
@@ -540,10 +540,10 @@ public class IRBuilder implements ASTVisitor {
         VReg destReg;
         switch (node.getOp()) {
             case preInc:
-                processSelfIncDec(node, "++");
+                processSelfIncDec(node, BinaryOperation.BinaryOp.Add);
                 break;
             case preDec:
-                processSelfIncDec(node, "--");
+                processSelfIncDec(node, BinaryOperation.BinaryOp.Sub);
                 break;
             case signPos:
                 node.setReg(node.getExpr().getReg());
@@ -596,7 +596,7 @@ public class IRBuilder implements ASTVisitor {
                 processBinaryLogic(node);
                 break;
             case assign:
-                processAssign(node);
+                processBinaryAssign(node);
         }
     }
 
@@ -739,7 +739,224 @@ public class IRBuilder implements ASTVisitor {
         }
     }
 
-    private void processSelfIncDec(ExprNode node, )
+    private void processSelfIncDec(ExprNode node, BinaryOperation.BinaryOp op) {
+        ExprNode exprNode;
+        if (node instanceof PostfixExprNode) {
+            exprNode = ((PostfixExprNode) node).getExpr();
+        } else if (node instanceof PrefixExprNode) {
+            exprNode = ((PrefixExprNode) node).getExpr();
+        } else {
+            throw new CompileError("process self inc dec error");
+        }
+
+        boolean oldMemAccess = memAccess;
+        boolean curMemAccess = checkMemAccess(exprNode);
+        memAccess = false;
+        exprNode.accept(this);
+
+        if (node instanceof PrefixExprNode)
+            node.setReg(exprNode.getReg());
+        else {
+            VReg destReg = new VReg("");
+            curBlock.append(new Move(curBlock, destReg, exprNode.getReg()));
+            node.setReg(destReg);
+        }
+
+        Immediate tmpNum1 = new Immediate(1);
+        if (curMemAccess) {
+            VReg destReg = new VReg("");
+            memAccess = true;
+            exprNode.accept(this);
+            curBlock.append(new BinaryOperation(curBlock, destReg, op, tmpNum1, exprNode.getReg()));
+            curBlock.append(new Store(curBlock, destReg, exprNode.getAddr(), Tools.regSize, exprNode.getOffset()));
+
+            if (node instanceof PostfixExprNode) {
+                node.setReg(destReg);
+            }
+        } else {
+            curBlock.append(new BinaryOperation(curBlock, (Register) exprNode.getReg(), op, tmpNum1, exprNode.getReg()));
+        }
+        memAccess = oldMemAccess;
+    }
+
+    private void processBinaryArithString(BinaryExprNode node) {
+        if (node.getLhs().getType().getTypeName().equals("string"))
+            processBinaryString(node);
+        else
+            processBinaryArith(node);
+    }
+
+    private void processBinaryCompareString(BinaryExprNode node) {
+        if (node.getLhs().getType().getTypeName().equals("string"))
+            processBinaryString(node);
+        else
+            processBinaryCompare(node);
+    }
+
+    private void processBinaryString(BinaryExprNode node) {
+        node.getLhs().accept(this);
+        node.getRhs().accept(this);
+        ExprNode tmpNode = null;
+        IRFunction stringProcessFunc = null;
+        switch (node.getOp()) {
+            case add:
+                stringProcessFunc = irRoot.getBuildInFuncMap().get("__string__link");
+                break;
+            case less:
+                stringProcessFunc = irRoot.getBuildInFuncMap().get("__string__less");
+                break;
+            case leq:
+                stringProcessFunc = irRoot.getBuildInFuncMap().get("__string__leq");
+                break;
+            case equal:
+                stringProcessFunc = irRoot.getBuildInFuncMap().get("__string__equal");
+                break;
+            case neq:
+                stringProcessFunc = irRoot.getBuildInFuncMap().get("__strinng__neq");
+                break;
+            case greater:
+                tmpNode = node.getLhs();
+                node.setLhs(node.getRhs());
+                node.setOp(BinaryExprNode.BinOp.less);
+                node.setRhs(tmpNode);
+                stringProcessFunc = irRoot.getBuildInFuncMap().get("__string__less");
+                break;
+            case geq:
+                tmpNode = node.getLhs();
+                node.setLhs(node.getRhs());
+                node.setOp(BinaryExprNode.BinOp.less);
+                node.setRhs(tmpNode);
+                stringProcessFunc = irRoot.getBuildInFuncMap().get("__string__leq");
+                break;
+            default:
+                throw new CompileError("invalid string op");
+        }
+        VReg destReg = new VReg(null);
+        List<IntValue> funcArgs = new ArrayList<>();
+        funcArgs.add(node.getLhs().getReg());
+        funcArgs.add(node.getRhs().getReg());
+        curBlock.append(new FuncCall(curBlock, destReg, stringProcessFunc, funcArgs));
+
+        if (node.getFalseBlock() != null) {
+            curBlock.setEnd(new Branch(curBlock, destReg, node.getTrueBlock(), node.getFalseBlock()));
+        } else {
+            node.setReg(destReg);
+        }
+    }
+
+    private void processBinaryArith(BinaryExprNode node) {
+        node.getLhs().accept(this);
+        node.getRhs().accept(this);
+
+        IntValue lhsValue = node.getLhs().getReg();
+        IntValue rhsValue = node.getRhs().getReg();
+
+        int lhsImm = 0;
+        int rhsImm = 0;
+        if (lhsValue instanceof Immediate)
+            lhsImm = ((Immediate) lhsValue).getValue();
+        if (rhsValue instanceof Immediate)
+            rhsImm = ((Immediate) rhsValue).getValue();
+
+        // optim
+        boolean constRes = lhsValue instanceof Immediate && rhsValue instanceof Immediate;
+        BinaryOperation.BinaryOp op = null;
+        switch (node.getOp()) {
+            case add:
+                op = BinaryOperation.BinaryOp.Add;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm + rhsImm));
+                    return;
+                }
+                break;
+
+            case sub:
+                op = BinaryOperation.BinaryOp.Sub;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm - rhsImm));
+                    return;
+                }
+                break;
+
+            case mul:
+                op = BinaryOperation.BinaryOp.Mul;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm * rhsImm));
+                    return;
+                }
+                break;
+
+            case div:
+                op = BinaryOperation.BinaryOp.Div;
+                if (constRes) {
+                    if (rhsImm == 0)
+                        throw new CompileError("divide by 0");
+                    node.setReg(new Immediate(lhsImm / rhsImm));
+                    return;
+                }
+                irRoot.setContainnShiftDiv(true);
+                break;
+
+            case mod:
+                op = BinaryOperation.BinaryOp.Mod;
+                if (constRes) {
+                    if (rhsImm  == 0)
+                        throw new CompileError("mod by 0");
+                    node.setReg(new Immediate(lhsImm % rhsImm));
+                    return;
+                }
+                irRoot.setContainnShiftDiv(true);
+                break;
+
+            case shiftLeft:
+                op = BinaryOperation.BinaryOp.ShiftLeft;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm << rhsImm));
+                    return;
+                }
+                irRoot.setContainnShiftDiv(true);
+                break;
+
+            case shiftRight:
+                op = BinaryOperation.BinaryOp.ShiftRight;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm >> rhsImm));
+                    return;
+                }
+                irRoot.setContainnShiftDiv(true);
+                break;
+
+            case bitwiseAnd:
+                op = BinaryOperation.BinaryOp.BitwiseAnd;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm & rhsImm));
+                    return;
+                }
+                break;
+
+            case bitwiseOr:
+                op = BinaryOperation.BinaryOp.BitwiseOr;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm | rhsImm));
+                    return;
+                }
+                break;
+
+            case bitwiseXor:
+                op = BinaryOperation.BinaryOp.BitwiseXor;
+                if (constRes) {
+                    node.setReg(new Immediate(lhsImm ^ rhsImm));
+                    return;
+                }
+                break;
+
+            default:
+                throw new CompileError("invalid binary arith op");
+        }
+        VReg destReg = new VReg(null);
+        curBlock.append(new BinaryOperation(curBlock, destReg, op, lhsValue, rhsValue));
+        node.setReg(destReg);
+    }
 
     private void processBinaryCompare(BinaryExprNode node) {
         node.getLhs().accept(this);
@@ -747,15 +964,109 @@ public class IRBuilder implements ASTVisitor {
         IntValue lhsValue = node.getLhs().getReg();
         IntValue rhsValue = node.getRhs().getReg();
         IntValue tmp;
+        int lhsImm = 0;
+        int rhsImm = 0;
+        if (lhsValue instanceof Immediate)
+            lhsImm = ((Immediate) lhsValue).getValue();
+        if (rhsValue instanceof Immediate)
+            rhsImm = ((Immediate) rhsValue).getValue();
+        boolean constRes = lhsValue instanceof Immediate && rhsValue instanceof Immediate;
+        Comparison.Compare cmp = null;
+        switch (node.getOp()) {
+            case equal:
+                cmp = Comparison.Compare.Equal;
+                if (constRes) {
+                    if (lhsImm == rhsImm)
+                        node.setReg(new Immediate(1));
+                    else
+                        node.setReg(new Immediate(0));
+                    return;
+                }
+                break;
+
+            case neq:
+                cmp = Comparison.Compare.Neq;
+                if (constRes) {
+                    if (lhsImm != rhsImm)
+                        node.setReg(new Immediate(1));
+                    else
+                        node.setReg(new Immediate(0));
+                    return;
+                }
+                break;
+
+            case less:
+                cmp = Comparison.Compare.Less;
+                if (constRes) {
+                    if (lhsImm < rhsImm)
+                        node.setReg(new Immediate(1));
+                    else
+                        node.setReg(new Immediate(0));
+                    return;
+                }
+                break;
+
+            case leq:
+                cmp = Comparison.Compare.Leq;
+                if (constRes) {
+                    if (lhsImm <= rhsImm)
+                        node.setReg(new Immediate(1));
+                    else
+                        node.setReg(new Immediate(0));
+                    return;
+                }
+                break;
+
+            case greater:
+                cmp = Comparison.Compare.Greater;
+                if (constRes) {
+                    if (lhsImm > rhsImm)
+                        node.setReg(new Immediate(1));
+                    else
+                        node.setReg(new Immediate(0));
+                    return;
+                }
+                break;
+
+            case geq:
+                cmp = Comparison.Compare.Geq;
+                if (constRes) {
+                    if (lhsImm >= rhsImm)
+                        node.setReg(new Immediate(1));
+                    else
+                        node.setReg(new Immediate(0));
+                    return;
+                }
+                break;
+        }
+
+        VReg destReg = new VReg(null);
+        curBlock.append(new Comparison(curBlock, destReg, cmp, lhsValue, rhsValue));
+        if (node.getFalseBlock() != null)
+            curBlock.setEnd(new Branch(curBlock, destReg, node.getTrueBlock(), node.getFalseBlock()));
+        else
+            node.setReg(destReg);
         
     }
 
-    private void intCompareBinaryOp(BinaryExprNode node) {
+    private void processBinaryLogic(BinaryExprNode node) {
+        // short circuit
+        if (node.getOp() == BinaryExprNode.BinOp.logicAnd) {
+            node.getLhs().setFalseBlock(node.getFalseBlock());
+            node.getLhs().setTrueBlock(new BasicBlock(curFunc, "logic_and_lhs_true"));
+            node.getLhs().accept(this);
+            curBlock = node.getLhs().getTrueBlock();
+        } else if (node.getOp() == BinaryExprNode.BinOp.logicOr) {
+            node.getLhs().setTrueBlock(node.getTrueBlock());
+            node.getLhs().setFalseBlock(new BasicBlock(curFunc, "logic_or_lhs_false"));
+            node.getLhs().accept(this);
+            curBlock = node.getLhs().getFalseBlock();
+        } else
+            throw new CompileError("invalid binary logic op");
 
-    }
-
-    private void logicBinaryOp(BinaryExprNode node) {
-
+        node.getRhs().setTrueBlock(node.getTrueBlock());
+        node.getRhs().setFalseBlock(node.getFalseBlock());
+        node.getRhs().accept(this);
     }
 
     private void processBuildInFunc(FuncExprNode funcExprNode, String targetFuncName, FuncEntity funcEntity, ExprNode thisExpr) {
@@ -909,6 +1220,30 @@ public class IRBuilder implements ASTVisitor {
         }
     }
 
+    private void processBinaryAssign(BinaryExprNode node) {
+        boolean memAccessOp = checkMemAccess(node.getLhs());
+        memAccess = memAccessOp;
+        node.getLhs().accept(this);
+        memAccess = false;
+
+        if (node.getRhs().getType().getTypeName().equals("bool") && !(node.getRhs() instanceof  BoolConstNode)) {
+            node.getRhs().setTrueBlock(new BasicBlock(curFunc, null));
+            node.getRhs().setFalseBlock(new BasicBlock(curFunc, null));
+        }
+        node.getRhs().accept(this);
+
+        int memOffset = 0;
+        IntValue destValue;
+        if (memAccessOp) {
+            destValue = node.getLhs().getAddr();
+            memOffset = node.getLhs().getOffset();
+        } else {
+            destValue = node.getLhs().getReg();
+        }
+        processAssign(destValue, node.getRhs(), memOffset, Tools.regSize, memAccessOp);
+        node.setReg(node.getRhs().getReg());
+    }
+
     private void processAssign(IntValue dest, ExprNode src, int offset, int size, boolean accessMem) {
         if (src.getTrueBlock() == null) {
             if (accessMem)
@@ -931,6 +1266,25 @@ public class IRBuilder implements ASTVisitor {
                 src.getFalseBlock().setEnd(new Jump(src.getFalseBlock(), mergeBlock));
             }
             curBlock = mergeBlock;
+        }
+    }
+
+    private boolean checkMemAccess(ExprNode node) {
+        return node instanceof MemberExprNode || node instanceof ArrayExprNode || (node instanceof IdentifierExprNode && checkIdentifierMemAccess((IdentifierExprNode) node));
+    }
+
+    private boolean checkIdentifierMemAccess(IdentifierExprNode node) {
+        if (node.isMemAccessChecked()) {
+            return node.isMemAccessing();
+        } else {
+            if (curClass != null) {
+                VarEntity varEntity = curScope.getVar(node.getIdentifier());
+                node.setMemAccessing(varEntity.getIrReg() == null);
+            } else {
+                node.setMemAccessing(false);
+            }
+            node.setMemAccessChecked(true);
+            return node.isMemAccessing();
         }
     }
 

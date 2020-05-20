@@ -12,6 +12,8 @@ public class IRRoot {
 
     private List<String> buildInList = new ArrayList<>();
 
+    private boolean containnShiftDiv = false;
+
     public IRRoot() {
         buildInList.add("print");
         buildInList.add("println");
@@ -30,8 +32,8 @@ public class IRRoot {
         buildInList.add("__string__link");
         buildInList.add("__string__less");
         buildInList.add("__string__leq");
-        buildInList.add("__string__greater");
-        buildInList.add("__string__geq");
+//        buildInList.add("__string__greater");
+//        buildInList.add("__string__geq");
         buildInList.add("__string__equal");
         buildInList.add("__string__neq");
 
@@ -91,5 +93,13 @@ public class IRRoot {
 
     public void setBuildInList(List<String> buildInList) {
         this.buildInList = buildInList;
+    }
+
+    public boolean isContainnShiftDiv() {
+        return containnShiftDiv;
+    }
+
+    public void setContainnShiftDiv(boolean containnShiftDiv) {
+        this.containnShiftDiv = containnShiftDiv;
     }
 }
