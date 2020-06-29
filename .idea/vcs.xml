@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LLIRInterpreter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LLIRInterpreter/chen" vcs="Git" />
   </component>
 </project>
